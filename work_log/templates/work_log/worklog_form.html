@@ -1,0 +1,86 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="card" style="max-width: 800px; margin: 0 auto;">
+    <div class="card-header">
+        <h2>{% if object %}Edit{% else %}New{% endif %} Work Log</h2>
+        <a href="{% url 'worklog_list' %}" class="btn">Back to List</a>
+    </div>
+    <div class="card-body">
+        <form method="post">
+            {% csrf_token %}
+            <div style="display: grid; grid-template-columns: 1fr 200px; gap: 1rem; margin-bottom: 1rem;">
+                <div class="form-group">
+                    <label>Task Description</label>
+                    {{ form.task_description }}
+                </div>
+                <div class="form-group">
+                    <label>Date</label>
+                    {{ form.date }}
+                </div>
+            </div>
+
+            <div class="form-group">
+                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.5rem;">
+                    <label>Select Tags</label>
+                    <a href="{% url 'tag_new' %}" style="font-size: 0.8rem; text-decoration: none; color: var(--primary-color);">+ Create New Tag</a>
+                </div>
+                <div class="tags-checkbox-container">
+                    {% for tag in tags %}
+                        <label class="tag-checkbox-label">
+                            <input type="checkbox" name="tags" value="{{ tag.id }}" {% if tag in form.instance.tags.all or tag.id|stringformat:"s" in form.tags.value %}checked{% endif %}>
+                            <span class="tag-chip" style="--tag-color: {{ tag.color|default:'#6b7280' }}">
+                                {{ tag.name }}
+                            </span>
+                        </label>
+                    {% endfor %}
+                </div>
+            </div>
+            
+            <div class="card-actions" style="justify-content: flex-end; margin-top: 1rem;">
+                <button type="submit" class="btn btn-primary" style="padding: 0.6rem 2rem;">Save Work Log</button>
+            </div>
+        </form>
+    </div>
+</div>
+
+<style>
+    .tags-checkbox-container {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.75rem;
+        padding: 0.5rem;
+        border: 1px solid var(--border-color);
+        border-radius: 0.5rem;
+        background: var(--bg-color);
+    }
+
+    .tag-checkbox-label {
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+    }
+
+    .tag-checkbox-label input {
+        display: none;
+    }
+
+    .tag-chip {
+        padding: 0.4rem 0.8rem;
+        border-radius: 2rem;
+        font-size: 0.85rem;
+        font-weight: 500;
+        border: 2px solid transparent;
+        background: white;
+        color: var(--tag-color);
+        border: 1px solid var(--tag-color);
+        transition: all 0.2s;
+        display: inline-block;
+    }
+
+    .tag-checkbox-label input:checked + .tag-chip {
+        background: var(--tag-color);
+        color: white;
+    }
+</style>
+{% endblock %}

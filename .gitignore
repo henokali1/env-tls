@@ -1,0 +1,104 @@
+# =========================
+# Python / Django
+# =========================
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.pyc
+
+# Django stuff
+*.log
+local_settings.py
+db.sqlite3
+db.sqlite3-journal
+
+# Media & static files (usually not tracked)
+media/
+staticfiles/
+
+# =========================
+# Virtual Environments
+# =========================
+env/
+venv/
+ENV/
+.env
+.env.*
+.venv/
+
+# =========================
+# Django migrations (optional)
+# =========================
+# Uncomment if you do NOT want to track migrations
+# */migrations/
+# !*/migrations/__init__.py
+
+# =========================
+# IDEs & Editors
+# =========================
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# =========================
+# OS files
+# =========================
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# =========================
+# Test / Coverage
+# =========================
+htmlcov/
+.coverage
+.coverage.*
+.pytest_cache/
+nosetests.xml
+coverage.xml
+
+# =========================
+# Build / Packaging
+# =========================
+build/
+dist/
+*.egg-info/
+.eggs/
+
+# =========================
+# Logs & Runtime
+# =========================
+*.log
+*.pid
+*.sock
+
+# =========================
+# Cache / Temp
+# =========================
+.cache/
+*.tmp
+*.bak
+*.swp
+
+# =========================
+# Node / Frontend (if used)
+# =========================
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# =========================
+# Secrets & Credentials
+# =========================
+*.pem
+*.key
+*.crt
+
+# =========================
+# Docker
+# =========================
+.env.docker
+docker-compose.override.yml

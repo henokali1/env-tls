@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div style="max-width: 600px; margin: 0 auto;">
+    <div class="card">
+        <div class="card-header">Delete Extension</div>
+        <div class="card-body">
+            <p>Are you sure you want to delete the extension for <strong>{{ extension.name }}</strong> ({{ extension.extension_number }})?</p>
+            <p style="color: var(--danger-color); font-size: 0.875rem;">This action cannot be undone.</p>
+            
+            <form method="post" style="margin-top: 2rem;">
+                {% csrf_token %}
+                <div class="card-actions">
+                    <button type="submit" class="btn btn-danger">Confirm Delete</button>
+                    <a href="{% url 'phone_extension_list' %}" class="btn"
+                        style="border: 1px solid var(--border-color);">Cancel</a>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+{% endblock %}

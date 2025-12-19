@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 2rem;">
+    <h1>Systems</h1>
+    <a href="{% url 'system_create' %}" class="btn btn-primary">Add New System</a>
+</div>
+
+<div class="card">
+    <table>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for system in object_list %}
+            <tr>
+                <td>{{ system.name }}</td>
+                <td>
+                    <a href="{% url 'system_update' system.pk %}" class="btn btn-primary"
+                        style="padding: 0.25rem 0.5rem; font-size: 0.8rem;">Edit</a>
+                    <a href="{% url 'system_delete' system.pk %}" class="btn btn-danger"
+                        style="padding: 0.25rem 0.5rem; font-size: 0.8rem;">Delete</a>
+                </td>
+            </tr>
+            {% empty %}
+            <tr>
+                <td colspan="2">No systems found.</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+{% endblock %}

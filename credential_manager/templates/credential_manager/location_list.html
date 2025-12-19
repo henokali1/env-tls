@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 2rem;">
+    <h1>Locations</h1>
+    <a href="{% url 'location_create' %}" class="btn btn-primary">Add New Location</a>
+</div>
+
+<div class="card">
+    <table>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for location in object_list %}
+            <tr>
+                <td>{{ location.name }}</td>
+                <td>
+                    <a href="{% url 'location_update' location.pk %}" class="btn btn-primary"
+                        style="padding: 0.25rem 0.5rem; font-size: 0.8rem;">Edit</a>
+                    <a href="{% url 'location_delete' location.pk %}" class="btn btn-danger"
+                        style="padding: 0.25rem 0.5rem; font-size: 0.8rem;">Delete</a>
+                </td>
+            </tr>
+            {% empty %}
+            <tr>
+                <td colspan="2">No locations found.</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+{% endblock %}

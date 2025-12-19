@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>Confirm Delete System</h1>
+<p>Are you sure you want to delete system "<strong>{{ object.name }}</strong>"? This might cascade delete related
+    credentials.</p>
+<form method="post">
+    {% csrf_token %}
+    <button type="submit" class="btn btn-danger">Confirm Delete</button>
+    <a href="{% url 'system_list' %}" class="btn">Cancel</a>
+</form>
+{% endblock %}

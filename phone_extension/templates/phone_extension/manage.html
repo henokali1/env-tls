@@ -1,0 +1,164 @@
+{% extends 'base.html' %} {% block content %}
+<div class="card" style="margin-bottom: 2rem;">
+    <div class="card-header">
+        <span>Manage Phone Extensions</span>
+        <button onclick="toggleForms()" class="btn btn-primary" id="toggleBtn">Add / Import</button>
+    </div>
+    <div class="card-body" id="managementForms" style="display: none;">
+        <div class="grid">
+            <!-- Add New Form -->
+            <div class="card" style="border: 1px dashed var(--border-color);">
+                <div class="card-header" style="font-size: 0.9rem;">Add New Extension</div>
+                <div class="card-body">
+                    <form method="post" action="{% url 'phone_extension_manage' %}">
+                        {% csrf_token %}
+                        {% for field in form %}
+                        <div class="form-group">
+                            <label style="font-size: 0.8rem;">{{ field.label }}</label>
+                            {{ field }}
+                        </div>
+                        {% endfor %}
+                        <button type="submit" name="submit_single" class="btn btn-primary"
+                            style="width: 100%;">Save</button>
+                    </form>
+                </div>
+            </div>
+
+            <!-- Import CSV Form -->
+            <div class="card" style="border: 1px dashed var(--border-color);">
+                <div class="card-header" style="font-size: 0.9rem;">Bulk Import (CSV)</div>
+                <div class="card-body">
+                    <p style="font-size: 0.8rem; margin-bottom: 0.5rem;">Upload CSV to add multiple extensions.</p>
+                    <a href="{% url 'phone_extension_sample_csv' %}"
+                        style="font-size: 0.8rem; color: var(--primary-color); display: block; margin-bottom: 1rem;">⬇
+                        Download Sample</a>
+                    <form method="post" action="{% url 'phone_extension_manage' %}" enctype="multipart/form-data">
+                        {% csrf_token %}
+                        {% for field in csv_form %}
+                        <div class="form-group">
+                            {{ field }}
+                        </div>
+                        {% endfor %}
+                        <button type="submit" name="submit_csv" class="btn btn-primary"
+                            style="width: 100%;">Import</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="card">
+    <div class="card-header">
+        <span>Extension List</span>
+        <input type="text" id="jsSearchInput" placeholder="Search by name or extension..."
+            style="padding: 8px 12px; font-size: 0.9rem; width: 300px; margin: 0;">
+    </div>
+    <div class="card-body">
+        {% if messages %}
+        {% for message in messages %}
+        <div class="alert {% if message.tags == 'success' %}alert-success{% else %}alert-danger{% endif %}">
+            {{ message }}
+        </div>
+        {% endfor %}
+        {% endif %}
+
+        <div style="overflow-x: auto">
+            <table id="extensionsTable">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Extension</th>
+                        <th>Full Number</th>
+                        <th style="text-align: right;">Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for ext in extensions %}
+                    <tr class="extension-row">
+                        <td class="ext-name" style="font-weight: 500">{{ ext.name }}</td>
+                        <td>
+                            <span class="ext-number"
+                                style="background: var(--bg-color); padding: 2px 6px; border-radius: 4px; font-family: monospace;">{{ ext.extension_number }}</span>
+                        </td>
+                        <td>{{ ext.full_number|default:"-" }}</td>
+                        <td style="text-align: right;">
+                            <a href="{% url 'phone_extension_edit' ext.pk %}" class="btn"
+                                style="background: #fef3c7; color: #92400e; padding: 4px 8px; font-size: 0.75rem;">Edit</a>
+                            <a href="{% url 'phone_extension_delete' ext.pk %}" class="btn btn-danger"
+                                style="padding: 4px 8px; font-size: 0.75rem;">Delete</a>
+                        </td>
+                    </tr>
+                    {% empty %}
+                    <tr id="noResultsRow">
+                        <td colspan="4" style="text-align: center; opacity: 0.6; padding: 2rem;">No extensions found.
+                        </td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+<script>
+    function toggleForms() {
+        const forms = document.getElementById('managementForms');
+        const btn = document.getElementById('toggleBtn');
+        if (forms.style.display === 'none') {
+            forms.style.display = 'block';
+            btn.innerText = 'Hide Forms';
+        } else {
+            forms.style.display = 'none';
+            btn.innerText = 'Add / Import';
+        }
+    }
+
+    document.getElementById('jsSearchInput').addEventListener('keyup', function () {
+        const query = this.value.toLowerCase();
+        const rows = document.querySelectorAll('.extension-row');
+        let visibleCount = 0;
+
+        rows.forEach(row => {
+            const name = row.querySelector('.ext-name').innerText.toLowerCase();
+            const number = row.querySelector('.ext-number').innerText.toLowerCase();
+
+            if (name.includes(query) || number.includes(query)) {
+                row.style.display = '';
+                visibleCount++;
+            } else {
+                row.style.display = 'none';
+            }
+        });
+
+        // Handle "No results found" dynamic row if needed
+        let noResults = document.getElementById('noResultsRowJs');
+        if (visibleCount === 0 && rows.length > 0) {
+            if (!noResults) {
+                noResults = document.createElement('tr');
+                noResults.id = 'noResultsRowJs';
+                noResults.innerHTML = '<td colspan="4" style="text-align: center; opacity: 0.6; padding: 2rem;">No matching extensions found.</td>';
+                document.querySelector('#extensionsTable tbody').appendChild(noResults);
+            }
+        } else if (noResults) {
+            noResults.remove();
+        }
+    });
+</script>
+
+<style>
+    .alert {
+        padding: 10px;
+        margin-bottom: 10px;
+        border-radius: 4px;
+    }
+    .alert-success {
+        background-color: #d1fae5;
+        color: #065f46;
+    }
+    .alert-danger {
+        background-color: #fee2e2;
+        color: #991b1b;
+    }
+</style>
+{% endblock %}

@@ -1,0 +1,151 @@
+{% extends 'base.html' %} {% block content %}
+<div class="card" style="margin-bottom: 2rem;">
+    <div class="card-header">
+        <span>Manage Credentials</span>
+        <button onclick="toggleForms()" class="btn btn-primary" id="toggleBtn">Add / Import</button>
+    </div>
+    <div class="card-body" id="managementForms" style="display: none;">
+        <div class="grid">
+            <!-- Add New Form -->
+            <div class="card" style="border: 1px dashed var(--border-color);">
+                <div class="card-header" style="font-size: 0.9rem;">Add New Credential</div>
+                <div class="card-body">
+                    <form method="post" action="{% url 'credential_manage' %}" enctype="multipart/form-data">
+                        {% csrf_token %}
+                        {% for field in form %}
+                        <div class="form-group">
+                            <label style="font-size: 0.8rem;">{{ field.label }}</label>
+                            {{ field }}
+                        </div>
+                        {% endfor %}
+                        <button type="submit" name="submit_single" class="btn btn-primary" style="width: 100%;">Save</button>
+                    </form>
+                </div>
+            </div>
+
+            <!-- Import CSV Form -->
+            <div class="card" style="border: 1px dashed var(--border-color);">
+                <div class="card-header" style="font-size: 0.9rem;">Bulk Import (CSV)</div>
+                <div class="card-body">
+                    <p style="font-size: 0.8rem; margin-bottom: 0.5rem;">Upload CSV to add multiple credentials.</p>
+                    <a href="{% url 'credential_sample_csv' %}" style="font-size: 0.8rem; color: var(--primary-color); display: block; margin-bottom: 1rem;">⬇ Download Sample</a>
+                    <form method="post" action="{% url 'credential_manage' %}" enctype="multipart/form-data">
+                        {% csrf_token %}
+                        {% for field in bulk_form %}
+                        <div class="form-group">
+                            {{ field }}
+                        </div>
+                        {% endfor %}
+                        <button type="submit" name="submit_bulk" class="btn btn-primary" style="width: 100%;">Import</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="card">
+    <div class="card-header">
+        <span>Credential List</span>
+        <input type="text" id="jsSearchInput" placeholder="Search by system, user, or IP..." 
+               style="padding: 8px 12px; font-size: 0.9rem; width: 300px; margin: 0;">
+    </div>
+    <div class="card-body">
+        {% if messages %}
+        {% for message in messages %}
+        <div class="alert {% if message.tags == 'success' %}alert-success{% else %}alert-danger{% endif %}">
+            {{ message }}
+        </div>
+        {% endfor %}
+        {% endif %}
+
+        <div style="overflow-x: auto">
+            <table id="credentialsTable">
+                <thead>
+                    <tr>
+                        <th>System</th>
+                        <th>Location</th>
+                        <th>Description</th>
+                        <th>Username</th>
+                        <th>IPv4</th>
+                        <th style="text-align: right;">Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for credential in credentials %}
+                    <tr class="credential-row">
+                        <td class="search-system" style="font-weight: 500">{{ credential.system }}</td>
+                        <td class="search-location">{{ credential.location|default:"-" }}</td>
+                        <td class="search-desc">{{ credential.description|default:"-" }}</td>
+                        <td class="search-user">{{ credential.username|default:"-" }}</td>
+                        <td class="search-ip">{{ credential.ipv4|default:"-" }}</td>
+                        <td style="text-align: right;">
+                            <a href="{% url 'credential_update' credential.pk %}" class="btn" style="background: #fef3c7; color: #92400e; padding: 4px 8px; font-size: 0.75rem;">Edit</a>
+                            <a href="{% url 'credential_delete' credential.pk %}" class="btn btn-danger" style="padding: 4px 8px; font-size: 0.75rem;">Delete</a>
+                        </td>
+                    </tr>
+                    {% empty %}
+                    <tr>
+                        <td colspan="6" style="text-align: center; opacity: 0.6; padding: 2rem;">No credentials found.</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+            <div id="noResults" style="display: none; text-align: center; padding: 2rem; opacity: 0.6;">No matching credentials found.</div>
+        </div>
+    </div>
+</div>
+
+<script>
+    function toggleForms() {
+        const forms = document.getElementById('managementForms');
+        const btn = document.getElementById('toggleBtn');
+        if (forms.style.display === 'none') {
+            forms.style.display = 'block';
+            btn.innerText = 'Hide Forms';
+        } else {
+            forms.style.display = 'none';
+            btn.innerText = 'Add / Import';
+        }
+    }
+
+    document.getElementById('jsSearchInput').addEventListener('input', function() {
+        const query = this.value.toLowerCase().trim();
+        const rows = document.querySelectorAll('.credential-row');
+        let found = 0;
+
+        rows.forEach(row => {
+            const system = row.querySelector('.search-system').textContent.toLowerCase();
+            const location = row.querySelector('.search-location').textContent.toLowerCase();
+            const desc = row.querySelector('.search-desc').textContent.toLowerCase();
+            const user = row.querySelector('.search-user').textContent.toLowerCase();
+            const ip = row.querySelector('.search-ip').textContent.toLowerCase();
+            
+            if (system.includes(query) || location.includes(query) || desc.includes(query) || user.includes(query) || ip.includes(query)) {
+                row.style.display = '';
+                found++;
+            } else {
+                row.style.display = 'none';
+            }
+        });
+
+        document.getElementById('noResults').style.display = (found === 0 && rows.length > 0) ? 'block' : 'none';
+    });
+</script>
+
+<style>
+    .alert {
+        padding: 10px;
+        margin-bottom: 10px;
+        border-radius: 4px;
+    }
+    .alert-success {
+        background-color: #d1fae5;
+        color: #065f46;
+    }
+    .alert-danger {
+        background-color: #fee2e2;
+        color: #991b1b;
+    }
+</style>
+{% endblock %}

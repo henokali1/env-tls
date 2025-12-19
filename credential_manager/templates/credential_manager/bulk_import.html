@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>Bulk Import Credentials</h1>
+
+{% if messages %}
+<ul class="messages">
+    {% for message in messages %}
+    <li{% if message.tags %} class="{{ message.tags }}" {% endif %}>{{ message }}</li>
+        {% endfor %}
+</ul>
+{% endif %}
+
+<div class="card" style="margin-bottom: 2rem;">
+    <p>Upload a CSV file to bulk import credentials. The file must have the following columns:</p>
+    <code style="display: block; padding: 1rem; background: rgba(0,0,0,0.2); border-radius: 4px; margin-bottom: 1rem;">
+        System, Description, Username, Password, IPv4, Subnet Mask, Gateway, Remarks
+    </code>
+    <p>
+        <a href="{% url 'download_sample_csv' %}" class="btn"
+            style="background: transparent; border: 1px solid var(--border-color);">
+            <i class="fas fa-download"></i> Download Sample CSV
+        </a>
+    </p>
+</div>
+
+<form method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    {% for field in form %}
+    <div class="form-group">
+        <label for="{{ field.id_for_label }}">{{ field.label }}</label>
+        {{ field }}
+        {% if field.help_text %}<small style="display: block; opacity: 0.7;">{{ field.help_text }}</small>{% endif %}
+        {% for error in field.errors %}<div style="color: var(--danger-color);">{{ error }}</div>{% endfor %}
+    </div>
+    {% endfor %}
+    <button type="submit" class="btn btn-primary">Import</button>
+    <a href="{% url 'credential_list' %}" class="btn"
+        style="background: transparent; border: 1px solid var(--border-color);">Cancel</a>
+</form>
+{% endblock %}

@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div style="max-width: 600px; margin: 0 auto;">
+    <div class="card">
+        <div class="card-header">Edit Extension: {{ extension.name }}</div>
+        <div class="card-body">
+            <form method="post">
+                {% csrf_token %}
+                {% for field in form %}
+                <div class="form-group">
+                    <label for="{{ field.id_for_label }}">{{ field.label }}</label>
+                    {{ field }}
+                    {% if field.errors %}
+                    <small style="color: var(--danger-color);">{{ field.errors.0 }}</small>
+                    {% endif %}
+                </div>
+                {% endfor %}
+                <div class="card-actions">
+                    <button type="submit" class="btn btn-primary">Update Extension</button>
+                    <a href="{% url 'phone_extension_list' %}" class="btn"
+                        style="border: 1px solid var(--border-color);">Cancel</a>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+{% endblock %}

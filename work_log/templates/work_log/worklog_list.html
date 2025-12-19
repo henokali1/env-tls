@@ -1,0 +1,312 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div style="max-width: 1000px; margin: 0 auto;">
+    <!-- New Work Log Form -->
+    <div class="card" style="margin-bottom: 2rem; border-top: 4px solid var(--primary-color);">
+        <div class="card-header" style="background: transparent;">
+            <h2 style="margin: 0; font-size: 1.5rem;">New Work Log</h2>
+        </div>
+        <div class="card-body">
+            <form method="post" action="{% url 'worklog_list' %}">
+                {% csrf_token %}
+                <div class="new-log-grid" style="display: grid; grid-template-columns: 1fr 200px; gap: 1rem; margin-bottom: 1rem;">
+                    <div class="form-group">
+                        <label>Task Description</label>
+                        {{ form.task_description }}
+                        {% for error in form.task_description.errors %}<div class="text-danger">{{ error }}</div>{% endfor %}
+                    </div>
+                    <div class="form-group">
+                        <label>Date</label>
+                        {{ form.date }}
+                        {% for error in form.date.errors %}<div class="text-danger">{{ error }}</div>{% endfor %}
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.5rem;">
+                        <label>Select Tags</label>
+                        <a href="{% url 'tag_new' %}" style="font-size: 0.8rem; text-decoration: none; color: var(--primary-color);">+ Create New Tag</a>
+                    </div>
+                    <div class="tags-checkbox-container">
+                        {% for tag in tags %}
+                            <label class="tag-checkbox-label">
+                                <input type="checkbox" name="tags" value="{{ tag.id }}" {% if tag.id|stringformat:"s" in form.tags.value or tag in form.tags.value %}checked{% endif %}>
+                                <span class="tag-chip" style="--tag-color: {{ tag.color|default:'#6b7280' }}">
+                                    {{ tag.name }}
+                                </span>
+                            </label>
+                        {% endfor %}
+                    </div>
+                </div>
+
+                <div class="card-actions" style="justify-content: flex-end; margin-top: 1rem;">
+                    <button type="submit" class="btn btn-primary" style="padding: 0.6rem 2rem;">Save Log</button>
+                    <a href="{% url 'worklog_list' %}" class="btn" style="border: 1px solid var(--border-color);">Cancel</a>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Filters & List -->
+    <div class="card">
+        <div class="card-header">
+            <h2 style="margin: 0; font-size: 1.25rem;">Recent Logs</h2>
+            <div style="display: flex; gap: 0.5rem;">
+                <a href="{% url 'worklog_export' %}?{{ request.GET.urlencode }}" class="btn"
+                    style="border: 1px solid var(--border-color); background-color: #10b981; color: white;">Export CSV</a>
+            </div>
+        </div>
+
+        <div class="card-body">
+            <!-- Filters -->
+            <form method="get" class="filters-form">
+                <div class="filter-item">
+                    <label>Start Date</label>
+                    <input type="date" name="start_date" value="{{ request.GET.start_date }}">
+                </div>
+                <div class="filter-item">
+                    <label>End Date</label>
+                    <input type="date" name="end_date" value="{{ request.GET.end_date }}">
+                </div>
+                <div class="filter-item">
+                    <label>Filter by Tag</label>
+                    <select name="tag">
+                        <option value="">All Tags</option>
+                        {% for tag in tags %}
+                        <option value="{{ tag.id }}" {% if request.GET.tag == tag.id|stringformat:"i" %}selected{% endif %}>{{ tag.name }}</option>
+                        {% endfor %}
+                    </select>
+                </div>
+                <div class="filter-actions">
+                    <button type="submit" class="btn btn-primary">Apply</button>
+                    <a href="{% url 'worklog_list' %}" class="btn" style="border: 1px solid var(--border-color);">Reset</a>
+                </div>
+            </form>
+
+            <div style="display: flex; justify-content: space-between; margin: 1rem 0; font-size: 0.9rem;">
+                <div>
+                    {% if is_paginated %}
+                        <a href="?{{ request.GET.urlencode }}&show_all=true" class="nav-link" style="margin:0; text-decoration: underline;">Show All Results</a>
+                    {% elif request.GET.show_all %}
+                        <a href="?{% for key, value in request.GET.items %}{% if key != 'show_all' %}{{ key }}={{ value }}&{% endif %}{% endfor %}" class="nav-link" style="margin:0; text-decoration: underline;">Show Paged</a>
+                    {% endif %}
+                </div>
+                <div style="opacity: 0.7;">Showing {{ worklogs|length }} entries</div>
+            </div>
+
+            <div class="table-responsive">
+                <table class="modern-table">
+                    <thead>
+                        <tr>
+                            <th>Date</th>
+                            <th>Description</th>
+                            <th>Tags</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for log in worklogs %}
+                        <tr>
+                            <td style="white-space: nowrap; font-weight: 500;">
+                                <div style="font-size: 1.1rem;">{{ log.date|date:"d" }}</div>
+                                <div style="font-size: 0.8rem; opacity: 0.7; text-transform: uppercase;">{{ log.date|date:"M Y" }}</div>
+                            </td>
+                            <td class="task-desc-cell">{{ log.task_description|linebreaksbr }}</td>
+                            <td>
+                                <div class="tag-container">
+                                    {% for tag in log.tags.all %}
+                                    <span class="tag-badge" style="background-color: {{ tag.color }}20; color: {{ tag.color }}; border: 1px solid {{ tag.color }}40;">
+                                        {{ tag.name }}
+                                    </span>
+                                    {% endfor %}
+                                </div>
+                            </td>
+                        </tr>
+                        {% empty %}
+                        <tr>
+                            <td colspan="3" style="text-align: center; padding: 3rem; opacity: 0.5;">
+                                <div style="font-size: 2rem; margin-bottom: 1rem;">📁</div>
+                                <p>No work logs found for this period.</p>
+                            </td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- Pagination -->
+            {% if is_paginated %}
+            <div class="pagination">
+                {% if page_obj.has_previous %}
+                <a href="?page={{ page_obj.previous_page_number }}{% for key, value in request.GET.items %}{% if key != 'page' %}&{{ key }}={{ value }}{% endif %}{% endfor %}"
+                    class="btn">Previous</a>
+                {% endif %}
+
+                <span class="page-info">Page {{ page_obj.number }} of {{ page_obj.paginator.num_pages }}</span>
+
+                {% if page_obj.has_next %}
+                <a href="?page={{ page_obj.next_page_number }}{% for key, value in request.GET.items %}{% if key != 'page' %}&{{ key }}={{ value }}{% endif %}{% endfor %}"
+                    class="btn">Next</a>
+                {% endif %}
+            </div>
+            {% endif %}
+        </div>
+    </div>
+</div>
+
+<style>
+    .tags-checkbox-container {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.75rem;
+        padding: 0.5rem;
+        border: 1px solid var(--border-color);
+        border-radius: 0.5rem;
+        background: var(--bg-color);
+    }
+
+    .tag-checkbox-label {
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+    }
+
+    .tag-checkbox-label input {
+        display: none;
+    }
+
+    .tag-chip {
+        padding: 0.4rem 0.8rem;
+        border-radius: 2rem;
+        font-size: 0.85rem;
+        font-weight: 500;
+        border: 2px solid transparent;
+        background: white;
+        color: var(--tag-color);
+        border: 1px solid var(--tag-color);
+        transition: all 0.2s;
+        display: inline-block;
+    }
+
+    .tag-checkbox-label input:checked + .tag-chip {
+        background: var(--tag-color);
+        color: white;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+
+    .filters-form {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 1rem;
+        padding: 1.5rem;
+        background: var(--bg-color);
+        border-radius: 0.75rem;
+        margin-bottom: 1.5rem;
+        align-items: flex-end;
+    }
+
+    .filter-item label {
+        display: block;
+        font-size: 0.8rem;
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+        margin-bottom: 0.4rem;
+        opacity: 0.7;
+    }
+
+    .filter-actions {
+        display: flex;
+        gap: 0.5rem;
+    }
+
+    .table-responsive {
+        overflow-x: auto;
+    }
+
+    .modern-table {
+        width: 100%;
+        border-collapse: separate;
+        border-spacing: 0 0.5rem;
+    }
+
+    .modern-table th {
+        background: transparent;
+        border: none;
+        padding: 1rem;
+        font-size: 0.8rem;
+        text-transform: uppercase;
+        letter-spacing: 0.1em;
+        opacity: 0.6;
+    }
+
+    .modern-table td {
+        background: var(--card-bg);
+        padding: 1.25rem 1rem;
+        border-top: 1px solid var(--border-color);
+        border-bottom: 1px solid var(--border-color);
+    }
+
+    .modern-table td:first-child {
+        border-left: 1px solid var(--border-color);
+        border-top-left-radius: 0.75rem;
+        border-bottom-left-radius: 0.75rem;
+        text-align: center;
+    }
+
+    .modern-table td:last-child {
+        border-right: 1px solid var(--border-color);
+        border-top-right-radius: 0.75rem;
+        border-bottom-right-radius: 0.75rem;
+    }
+
+    .task-desc-cell {
+        line-height: 1.6;
+        min-width: 300px;
+    }
+
+    .tag-container {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.4rem;
+    }
+
+    .tag-badge {
+        padding: 0.2rem 0.6rem;
+        border-radius: 4px;
+        font-size: 0.75rem;
+        font-weight: 600;
+        white-space: nowrap;
+    }
+
+    .pagination {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 1rem;
+        margin-top: 2rem;
+    }
+
+    .page-info {
+        font-size: 0.9rem;
+        opacity: 0.7;
+    }
+
+    @media (max-width: 768px) {
+        .filters-form {
+            grid-template-columns: 1fr;
+        }
+        
+        .new-log-grid {
+            grid-template-columns: 1fr !important;
+        }
+
+        .modern-table td {
+            padding: 0.75rem 0.5rem;
+        }
+        
+        .task-desc-cell {
+            min-width: 200px;
+        }
+    }
+</style>
+{% endblock %}
