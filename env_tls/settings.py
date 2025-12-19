@@ -25,7 +25,15 @@ SECRET_KEY = '3o*0aw*pr)ld2n-v8(*381=&@i20*zdlbu6z^*1=^!m%r_7#*#'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ['env-tls.henokcodes.com', 'localhost', '127.0.0.1']
+
+CSRF_TRUSTED_ORIGINS = [
+    'https://env-tls.henokcodes.com',
+    'https://*.henokcodes.com',  # This covers all subdomains
+]
+
+CSRF_COOKIE_SECURE = True
+SESSION_COOKIE_SECURE = True
 
 
 # Application definition
