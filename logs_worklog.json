@@ -1,0 +1,1994 @@
+[
+    {
+        "created_at": "2025-09-24 07:11:46.500689",
+        "id": 6,
+        "log_date": "2025-09-11",
+        "task": "Assisted Thales team with configuring strip printer and KVM switch in MATC & EATC",
+        "updated_at": "2025-09-24 07:11:46.500705",
+        "user_id": 1
+    },
+    {
+        "created_at": "2025-09-24 07:12:05.090289",
+        "id": 7,
+        "log_date": "2025-09-10",
+        "task": "Renamed 3646 .bid files, preparation for conversion to .csv for AWOS data request.",
+        "updated_at": "2025-09-24 07:12:05.090305",
+        "user_id": 1
+    },
+    {
+        "created_at": "2025-09-24 07:12:13.252397",
+        "id": 8,
+        "log_date": "2025-09-10",
+        "task": "Attended RSMS reported issue in MATC & EATC.",
+        "updated_at": "2025-09-24 07:12:13.252414",
+        "user_id": 1
+    },
+    {
+        "created_at": "2025-09-24 07:12:24.514280",
+        "id": 9,
+        "log_date": "2025-09-10",
+        "task": "Performed installation verification check and prepared connectivity (switch to server) checklist for new RSMS",
+        "updated_at": "2025-09-24 07:12:24.514296",
+        "user_id": 1
+    },
+    {
+        "created_at": "2025-09-24 07:12:46.579342",
+        "id": 10,
+        "log_date": "2025-09-10",
+        "task": "Attended radio interference complaint for 124.32 (fire rescue)",
+        "updated_at": "2025-09-24 07:12:46.579359",
+        "user_id": 1
+    },
+    {
+        "created_at": "2025-09-24 07:12:58.109360",
+        "id": 11,
+        "log_date": "2025-09-09",
+        "task": "Laid out DP cable in EATC for the RSMS project",
+        "updated_at": "2025-09-24 07:12:58.109376",
+        "user_id": 1
+    },
+    {
+        "created_at": "2025-09-24 07:13:05.010821",
+        "id": 12,
+        "log_date": "2025-09-09",
+        "task": "Laid FOC from IDF room to PABX for RSMS project",
+        "updated_at": "2025-09-24 07:13:05.010839",
+        "user_id": 1
+    },
+    {
+        "created_at": "2025-09-24 07:13:11.706112",
+        "id": 13,
+        "log_date": "2025-09-09",
+        "task": "Responded to (Data Related to AWOS) query",
+        "updated_at": "2025-09-24 07:13:11.706130",
+        "user_id": 1
+    },
+    {
+        "created_at": "2025-09-24 07:13:20.757718",
+        "id": 14,
+        "log_date": "2025-09-08",
+        "task": "Assisted Bayanat with site survey",
+        "updated_at": "2025-09-24 07:13:20.757735",
+        "user_id": 1
+    },
+    {
+        "created_at": "2025-09-24 07:13:29.918496",
+        "id": 15,
+        "log_date": "2025-09-04",
+        "task": "Provided transition plan to the cyber security RFP",
+        "updated_at": "2025-09-24 07:13:29.918528",
+        "user_id": 1
+    },
+    {
+        "created_at": "2025-09-24 07:13:36.390617",
+        "id": 16,
+        "log_date": "2025-09-04",
+        "task": "Provided GPS location of manholes that will be surveyed that are within the critical area. (RE: Site visit Passes - Upgrade of CNS System at Sharjah International Airport - PNP 887 )",
+        "updated_at": "2025-09-24 07:13:36.390633",
+        "user_id": 1
+    },
+    {
+        "created_at": "2025-09-24 07:13:49.214723",
+        "id": 17,
+        "log_date": "2025-09-04",
+        "task": "Reviewed Cyber security RFP and provided comments",
+        "updated_at": "2025-09-24 07:13:49.214738",
+        "user_id": 1
+    },
+    {
+        "created_at": "2025-09-24 07:13:56.663582",
+        "id": 18,
+        "log_date": "2025-09-04",
+        "task": "Prepared and submitted monthly operational report for MET & IT.",
+        "updated_at": "2025-09-24 07:13:56.663597",
+        "user_id": 1
+    },
+    {
+        "created_at": "2025-09-24 07:14:03.488443",
+        "id": 19,
+        "log_date": "2025-09-03",
+        "task": "Attended ILS-30 flight check calibration",
+        "updated_at": "2025-09-24 07:14:03.488460",
+        "user_id": 1
+    },
+    {
+        "created_at": "2025-09-24 07:14:11.516636",
+        "id": 20,
+        "log_date": "2025-09-03",
+        "task": "Rectified RVR-30 issue (no reading, after cleaning back 2 normal)",
+        "updated_at": "2025-09-24 07:14:11.516653",
+        "user_id": 1
+    },
+    {
+        "created_at": "2025-09-24 07:14:16.548837",
+        "id": 21,
+        "log_date": "2025-09-03",
+        "task": "Reviewed Cyber security RFP and provided comments",
+        "updated_at": "2025-09-24 07:14:16.548853",
+        "user_id": 1
+    },
+    {
+        "created_at": "2025-09-24 07:14:22.895558",
+        "id": 22,
+        "log_date": "2025-09-02",
+        "task": "Assisted Bayanat with site survey (Radio TX room, CNS Data center, VCR Rooftop, VCR(M-ATC), RVR-MID, RVR-12)",
+        "updated_at": "2025-09-24 07:14:22.895575",
+        "user_id": 1
+    },
+    {
+        "created_at": "2025-09-24 07:14:33.878766",
+        "id": 23,
+        "log_date": "2025-09-02",
+        "task": "Shared Monthly Calibration Report",
+        "updated_at": "2025-09-24 07:14:33.878783",
+        "user_id": 1
+    },
+    {
+        "created_at": "2025-09-24 07:14:55.330728",
+        "id": 24,
+        "log_date": "2025-09-01",
+        "task": "Rodric FOC resplice to UPC to address connectivity issue in Cargo 4 police IDF room",
+        "updated_at": "2025-09-24 07:14:55.330744",
+        "user_id": 1
+    },
+    {
+        "created_at": "2025-09-24 07:15:02.737351",
+        "id": 25,
+        "log_date": "2025-09-01",
+        "task": "Removed maintenance laptop form MATC VCR (DFLOW)",
+        "updated_at": "2025-09-24 07:15:02.737368",
+        "user_id": 1
+    },
+    {
+        "created_at": "2025-09-24 07:15:08.646722",
+        "id": 26,
+        "log_date": "2025-09-01",
+        "task": "Shared certificates and CV with Eng. Zahid",
+        "updated_at": "2025-09-24 07:15:08.646737",
+        "user_id": 1
+    },
+    {
+        "created_at": "2025-09-24 07:15:16.302293",
+        "id": 27,
+        "log_date": "2025-09-01",
+        "task": "Assisted Bayanat with site survey for the upcoming AWOS/Radios and crash alarm project",
+        "updated_at": "2025-09-24 07:15:16.302309",
+        "user_id": 1
+    },
+    {
+        "created_at": "2025-09-24 07:15:22.780032",
+        "id": 28,
+        "log_date": "2025-09-01",
+        "task": "Shared AWOS Data with NCM",
+        "updated_at": "2025-09-24 07:15:22.780047",
+        "user_id": 1
+    },
+    {
+        "created_at": "2025-09-24 09:58:47.985984",
+        "id": 29,
+        "log_date": "2025-09-24",
+        "task": "Attended Sharjah RSMS Project Progress meeting.",
+        "updated_at": "2025-09-24 09:58:47.986002",
+        "user_id": 1
+    },
+    {
+        "created_at": "2025-09-25 07:34:46.243072",
+        "id": 30,
+        "log_date": "2025-09-25",
+        "task": "Provided replacement workstation for MET observer to work on passwords launch of AWOS7(OBS-1)",
+        "updated_at": "2025-09-25 07:34:46.243088",
+        "user_id": 1
+    },
+    {
+        "created_at": "2025-09-25 07:35:57.633682",
+        "id": 31,
+        "log_date": "2025-09-25",
+        "task": "Site survey: FIDS screen in departure PRO (power and Network cable setup)",
+        "updated_at": "2025-09-25 07:35:57.633698",
+        "user_id": 1
+    },
+    {
+        "created_at": "2025-09-25 08:24:58.235596",
+        "id": 32,
+        "log_date": "2025-09-25",
+        "task": "Configured AP/router for AGL SS3. \r\nIP: 10.10.10.9\r\nSSID: SS3 AGL\r\nPSW: Enova@2025",
+        "updated_at": "2025-09-25 08:24:58.235611",
+        "user_id": 1
+    },
+    {
+        "created_at": "2025-09-25 11:07:14.198594",
+        "id": 33,
+        "log_date": "2025-09-25",
+        "task": "Checked network issue (electrical team, Ansar) and fixed issue with Zone-2 network connectivity.",
+        "updated_at": "2025-09-25 11:07:14.198611",
+        "user_id": 1
+    },
+    {
+        "created_at": "2025-09-26 05:08:05.799265",
+        "id": 34,
+        "log_date": "2025-09-26",
+        "task": "Setup auto-launch of AWOS-7 for MET-OBS (EATC)",
+        "updated_at": "2025-09-26 05:08:05.799281",
+        "user_id": 1
+    },
+    {
+        "created_at": "2025-09-26 06:22:56.307535",
+        "id": 35,
+        "log_date": "2025-09-26",
+        "task": "Installed laptop side mount.",
+        "updated_at": "2025-09-26 06:22:56.307552",
+        "user_id": 1
+    },
+    {
+        "created_at": "2025-09-26 06:59:19.646745",
+        "id": 36,
+        "log_date": "2025-09-26",
+        "task": "Counter 15 printer replaced with a new one and now it's functioning properly.",
+        "updated_at": "2025-09-26 06:59:19.646763",
+        "user_id": 1
+    },
+    {
+        "created_at": "2025-09-26 06:59:59.329858",
+        "id": 37,
+        "log_date": "2025-09-26",
+        "task": "Reported FIDS issue in Al Diyala Lounge (main dome)  to Bala.mk@sharjahairport.ae",
+        "updated_at": "2025-09-26 06:59:59.329885",
+        "user_id": 1
+    },
+    {
+        "created_at": "2025-09-26 09:04:40.954520",
+        "id": 38,
+        "log_date": "2025-09-26",
+        "task": "Raised a Ticket for 5TB HDD (ENR2025:020509)",
+        "updated_at": "2025-09-26 09:04:40.954540",
+        "user_id": 1
+    },
+    {
+        "created_at": "2025-09-26 09:24:25.267295",
+        "id": 39,
+        "log_date": "2025-09-26",
+        "task": "Replaced u/s keyboard for SITA. Location: Al Diyala Lounge (main dome).",
+        "updated_at": "2025-09-26 09:24:25.267313",
+        "user_id": 1
+    },
+    {
+        "created_at": "2025-09-26 09:25:31.824189",
+        "id": 40,
+        "log_date": "2025-09-26",
+        "task": "Worked on em: [Vendor Questionnaire - Cybersecurity]",
+        "updated_at": "2025-09-26 09:25:31.824207",
+        "user_id": 1
+    },
+    {
+        "created_at": "2025-09-29 05:40:10.356402",
+        "id": 41,
+        "log_date": "2025-09-29",
+        "task": "VCCS Update\r\nPolice H/L – New number is 06-5989555\r\n\r\n\r\nReplace all KWK with:\r\n\r\nBrendan (ABG) – 052 319 5636\r\n\r\n\r\nOn the ATC Staff page add:\r\n\r\nCharles (CDB) – 054 461 4981",
+        "updated_at": "2025-09-29 05:40:10.356418",
+        "user_id": 1
+    },
+    {
+        "created_at": "2025-09-29 05:40:56.898607",
+        "id": 42,
+        "log_date": "2025-09-29",
+        "task": "Verified cable continuity from Al Diyala Lounge (main dome) to COSTA IDF room.",
+        "updated_at": "2025-09-29 05:40:56.898623",
+        "user_id": 1
+    },
+    {
+        "created_at": "2025-09-29 06:40:16.082654",
+        "id": 43,
+        "log_date": "2025-09-29",
+        "task": "Fixed issue with FIDS TV in Al Diyala Lounge main dome.",
+        "updated_at": "2025-09-29 06:40:16.082672",
+        "user_id": 1
+    },
+    {
+        "created_at": "2025-09-29 14:23:58.812452",
+        "id": 44,
+        "log_date": "2025-09-29",
+        "task": "Responded to Vendor Questionnaire - Cybersecurity",
+        "updated_at": "2025-09-29 14:23:58.812470",
+        "user_id": 1
+    },
+    {
+        "created_at": "2025-09-29 14:24:43.736609",
+        "id": 45,
+        "log_date": "2025-09-29",
+        "task": "Provided support to Ansar (Bridge light). dmXLAN DLN3 DIN u/s.",
+        "updated_at": "2025-09-29 14:24:43.736624",
+        "user_id": 1
+    },
+    {
+        "created_at": "2025-09-29 14:25:22.768159",
+        "id": 46,
+        "log_date": "2025-09-29",
+        "task": "Established network connectivity for the FIDS in PRO.",
+        "updated_at": "2025-09-29 14:25:22.768176",
+        "user_id": 1
+    },
+    {
+        "created_at": "2025-09-29 14:26:12.210169",
+        "id": 47,
+        "log_date": "2025-09-29",
+        "task": "Performed VCCS Update (Stan):\r\nTo update the ATCA position VCCS phone directory kindly follow the request below :\r\n\r\nAdmin page :\r\n1.\tDelete or remove (NSH) Nyash\r\n2.\tAdd (ABG) Brandon number : 0523195636\r\n\r\nATC Staff page :\r\n1.\tDelete or remove (MRD) Marianella\r\n2.\tDelete or remove (RIA) Riaan\r\n3.\tDelete or remove (NSH) Nyash",
+        "updated_at": "2025-09-29 14:26:12.210185",
+        "user_id": 1
+    },
+    {
+        "created_at": "2025-09-30 05:26:59.455238",
+        "id": 48,
+        "log_date": "2025-09-30",
+        "task": "Finalized FIDS installation and config in PRO (main dome)",
+        "updated_at": "2025-09-30 05:26:59.455254",
+        "user_id": 1
+    },
+    {
+        "created_at": "2025-09-30 05:27:42.825810",
+        "id": 49,
+        "log_date": "2025-09-30",
+        "task": "Communicated with Mr. Arjun regarding the water leakage in TX room.",
+        "updated_at": "2025-09-30 05:27:42.825827",
+        "user_id": 1
+    },
+    {
+        "created_at": "2025-09-30 05:28:27.133038",
+        "id": 50,
+        "log_date": "2025-09-30",
+        "task": "VCCS update (rename Brenda to Bren).",
+        "updated_at": "2025-09-30 05:28:27.133055",
+        "user_id": 1
+    },
+    {
+        "created_at": "2025-09-30 05:28:53.923346",
+        "id": 51,
+        "log_date": "2025-09-30",
+        "task": "Communicated with LEO regarding AMHS duplicate messages",
+        "updated_at": "2025-09-30 05:28:53.923362",
+        "user_id": 1
+    },
+    {
+        "created_at": "2025-09-30 06:20:41.410215",
+        "id": 52,
+        "log_date": "2025-09-30",
+        "task": "Extracted voice recoding of (Aircraft Full Emergency- UBG-345 - ATC records )",
+        "updated_at": "2025-09-30 06:20:41.410231",
+        "user_id": 1
+    },
+    {
+        "created_at": "2025-09-30 08:41:17.848119",
+        "id": 53,
+        "log_date": "2025-09-30",
+        "task": "Created a rule to trash all messages from KSEAARTX (AMHS)",
+        "updated_at": "2025-09-30 08:41:17.848136",
+        "user_id": 1
+    },
+    {
+        "created_at": "2025-10-01 04:29:09.050953",
+        "id": 54,
+        "log_date": "2025-10-01",
+        "task": "Sent monthly sensor report to NCM",
+        "updated_at": "2025-10-01 05:00:36.923877",
+        "user_id": 1
+    },
+    {
+        "created_at": "2025-10-01 04:34:36.172517",
+        "id": 55,
+        "log_date": "2025-10-01",
+        "task": "Sent Monthly AWOS Calibration Report schedule",
+        "updated_at": "2025-10-01 04:34:36.172533",
+        "user_id": 1
+    },
+    {
+        "created_at": "2025-10-01 04:39:58.915564",
+        "id": 56,
+        "log_date": "2025-10-01",
+        "task": "Responded to Magdy's request to remove background noise on CH7 recording on VDR (FIRE Hotline with ATC).",
+        "updated_at": "2025-10-01 04:39:58.915581",
+        "user_id": 1
+    },
+    {
+        "created_at": "2025-10-01 08:06:55.291189",
+        "id": 57,
+        "log_date": "2025-10-01",
+        "task": "Assisted Hamad (DANS PHX) with reimaging and re-config of PHX S2C02.",
+        "updated_at": "2025-10-06 06:52:38.646165",
+        "user_id": 1
+    },
+    {
+        "created_at": "2025-10-01 09:09:42.223930",
+        "id": 58,
+        "log_date": "2025-10-01",
+        "task": "Attended AWOS Upgrade Meeting (SIA Project Review and Alignment Meeting).",
+        "updated_at": "2025-10-06 06:53:20.397025",
+        "user_id": 1
+    },
+    {
+        "created_at": "2025-10-01 10:38:44.386140",
+        "id": 59,
+        "log_date": "2025-10-01",
+        "task": "Signed PPM checklist (MET & COM)",
+        "updated_at": "2025-10-01 10:38:44.386158",
+        "user_id": 1
+    },
+    {
+        "created_at": "2025-10-02 01:32:39.461669",
+        "id": 60,
+        "log_date": "2025-10-02",
+        "task": "Responded to (Fatima) Vendor Questionnaire - Cybersecurity",
+        "updated_at": "2025-10-06 06:54:26.293936",
+        "user_id": 1
+    },
+    {
+        "created_at": "2025-10-02 01:46:48.656373",
+        "id": 61,
+        "log_date": "2025-10-02",
+        "task": "Switched on and synchronized AMHS Client (EVCR2) --- 10.12.1.18",
+        "updated_at": "2025-10-02 01:46:48.656390",
+        "user_id": 1
+    },
+    {
+        "created_at": "2025-10-02 03:33:54.464779",
+        "id": 62,
+        "log_date": "2025-10-02",
+        "task": "Followed up with Eng. Sara regarding (Request for Support in Addressing Client Observations - CNS Data Center)",
+        "updated_at": "2025-10-02 03:33:54.464796",
+        "user_id": 1
+    },
+    {
+        "created_at": "2025-10-02 03:34:29.224759",
+        "id": 63,
+        "log_date": "2025-10-02",
+        "task": "Updated Stan & Sabu regarding completion of syncing AMHS in EATC",
+        "updated_at": "2025-10-02 03:34:29.224776",
+        "user_id": 1
+    },
+    {
+        "created_at": "2025-10-02 04:02:13.502572",
+        "id": 64,
+        "log_date": "2025-10-02",
+        "task": "Assisted DANS team with PHX CUTOVER (PHX workstation software upgrade).\r\n(ATMS NOTIFICATION – AT3/PHX CUTOVER AIRAC 10 2025)",
+        "updated_at": "2025-10-06 06:54:32.597533",
+        "user_id": 1
+    },
+    {
+        "created_at": "2025-10-02 05:33:24.761491",
+        "id": 65,
+        "log_date": "2025-10-02",
+        "task": "Updated MoM (FW: FM01 MoM 28 Aug 2025)",
+        "updated_at": "2025-10-02 05:33:24.761526",
+        "user_id": 1
+    },
+    {
+        "created_at": "2025-10-02 05:33:54.214554",
+        "id": 66,
+        "log_date": "2025-10-02",
+        "task": "Prepared FM01 Monthly Operational repot",
+        "updated_at": "2025-10-02 05:33:54.214572",
+        "user_id": 1
+    },
+    {
+        "created_at": "2025-10-02 09:00:01.203298",
+        "id": 67,
+        "log_date": "2025-10-02",
+        "task": "Assisted Beta IT, Bayanat, Indigo gulf (check point) and Credo (starlink) for the Cyber security site survey",
+        "updated_at": "2025-10-06 06:53:01.056825",
+        "user_id": 1
+    },
+    {
+        "created_at": "2025-10-02 12:21:53.761325",
+        "id": 68,
+        "log_date": "2025-10-02",
+        "task": "Attended Check-In Counter Assests meeting",
+        "updated_at": "2025-10-06 06:54:41.894002",
+        "user_id": 1
+    },
+    {
+        "created_at": "2025-10-03 11:35:39.863602",
+        "id": 69,
+        "log_date": "2025-10-03",
+        "task": "Requested for installation of cover tray (RE: EATC UPS ROOM AC'S WATER SPILL )",
+        "updated_at": "2025-10-03 11:35:39.863618",
+        "user_id": 1
+    },
+    {
+        "created_at": "2025-10-03 11:35:59.847391",
+        "id": 70,
+        "log_date": "2025-10-03",
+        "task": "Worked on FM02 monthly operational report.",
+        "updated_at": "2025-10-03 11:35:59.847407",
+        "user_id": 1
+    },
+    {
+        "created_at": "2025-10-04 09:49:13.395247",
+        "id": 71,
+        "log_date": "2025-10-04",
+        "task": "Shifted 18 FIDS screen from Costa idf room to east expansion Xray.",
+        "updated_at": "2025-10-06 06:56:09.585106",
+        "user_id": 1
+    },
+    {
+        "created_at": "2025-10-04 10:33:49.228681",
+        "id": 72,
+        "log_date": "2025-10-04",
+        "task": "Worked on CNS CNS Asset Update (manufacturers list).",
+        "updated_at": "2025-10-06 06:52:08.837928",
+        "user_id": 1
+    },
+    {
+        "created_at": "2025-10-06 05:34:21.058031",
+        "id": 73,
+        "log_date": "2025-10-06",
+        "task": "Traced power cable of AIMS rack",
+        "updated_at": "2025-10-06 05:34:21.058046",
+        "user_id": 1
+    },
+    {
+        "created_at": "2025-10-06 08:58:51.276370",
+        "id": 76,
+        "log_date": "2025-10-06",
+        "task": "Provided feedback to GPS RFP queries (Clarification on Time Reference System (GPS) )",
+        "updated_at": "2025-10-06 08:58:51.276386",
+        "user_id": 1
+    },
+    {
+        "created_at": "2025-10-06 10:06:55.394600",
+        "id": 77,
+        "log_date": "2025-10-06",
+        "task": "Requested access to access-controlled areas.",
+        "updated_at": "2025-10-06 10:06:55.394618",
+        "user_id": 1
+    },
+    {
+        "created_at": "2025-10-06 10:08:10.611834",
+        "id": 78,
+        "log_date": "2025-10-06",
+        "task": "Reviewed GPS RFP.",
+        "updated_at": "2025-10-06 10:08:10.611853",
+        "user_id": 1
+    },
+    {
+        "created_at": "2025-10-06 12:14:24.996027",
+        "id": 79,
+        "log_date": "2025-10-06",
+        "task": "Replaced defective HDD (S/N: ZC110W52) of RSMS server with a new one (S/N: 6230A011FYWG).",
+        "updated_at": "2025-10-06 12:14:24.996044",
+        "user_id": 1
+    },
+    {
+        "created_at": "2025-10-06 12:20:11.455271",
+        "id": 80,
+        "log_date": "2025-10-06",
+        "task": "Added Tags feature on work logger app.",
+        "updated_at": "2025-10-06 12:20:11.455289",
+        "user_id": 1
+    },
+    {
+        "created_at": "2025-10-07 03:50:32.367216",
+        "id": 81,
+        "log_date": "2025-10-07",
+        "task": "submitted daily activity report",
+        "updated_at": "2025-10-07 03:50:32.367233",
+        "user_id": 1
+    },
+    {
+        "created_at": "2025-10-07 03:51:14.800380",
+        "id": 82,
+        "log_date": "2025-10-07",
+        "task": "Requested procedure to disposal of u/s HDD and PR procedure for spare unit replacement.",
+        "updated_at": "2025-10-07 03:51:14.800396",
+        "user_id": 1
+    },
+    {
+        "created_at": "2025-10-07 05:19:46.945977",
+        "id": 83,
+        "log_date": "2025-10-07",
+        "task": "Submitted FIDS asset list and fault status report email: (Fida Status report updated)",
+        "updated_at": "2025-10-07 05:19:46.945996",
+        "user_id": 1
+    },
+    {
+        "created_at": "2025-10-07 05:20:07.353304",
+        "id": 84,
+        "log_date": "2025-10-07",
+        "task": "Requested (Guidance on Defective HDD Disposal and Replacement Procedure)",
+        "updated_at": "2025-10-07 05:20:07.353322",
+        "user_id": 1
+    },
+    {
+        "created_at": "2025-10-07 05:58:58.011390",
+        "id": 85,
+        "log_date": "2025-10-07",
+        "task": "Attended AIMS complaint in MATC. Link down. Issue rectified by changing damaged FOC.",
+        "updated_at": "2025-10-07 08:34:06.442680",
+        "user_id": 1
+    },
+    {
+        "created_at": "2025-10-07 07:44:24.838159",
+        "id": 86,
+        "log_date": "2025-10-07",
+        "task": "Submitted AWOS Sensor Drawings and Work Area Details",
+        "updated_at": "2025-10-07 07:44:24.838177",
+        "user_id": 1
+    },
+    {
+        "created_at": "2025-10-07 10:50:30.001081",
+        "id": 87,
+        "log_date": "2025-10-07",
+        "task": "Provided response to (Vendor Questionnaire - Cybersecurity )",
+        "updated_at": "2025-10-07 10:50:30.001101",
+        "user_id": 1
+    },
+    {
+        "created_at": "2025-10-08 04:13:02.921110",
+        "id": 88,
+        "log_date": "2025-10-08",
+        "task": "Responded to FIDS replacement request.",
+        "updated_at": "2025-10-08 04:13:02.921127",
+        "user_id": 1
+    },
+    {
+        "created_at": "2025-10-08 04:17:28.418289",
+        "id": 89,
+        "log_date": "2025-10-08",
+        "task": "Requested for network switches (Request for Network Switches) for Abdul Ghaffar and Noura",
+        "updated_at": "2025-10-08 04:17:28.418305",
+        "user_id": 1
+    },
+    {
+        "created_at": "2025-10-08 05:13:12.931717",
+        "id": 90,
+        "log_date": "2025-10-08",
+        "task": "Provided incident report (East Expansion UPS System in Critical Condition)",
+        "updated_at": "2025-10-08 05:13:12.931734",
+        "user_id": 1
+    },
+    {
+        "created_at": "2025-10-08 10:19:42.283676",
+        "id": 91,
+        "log_date": "2025-10-08",
+        "task": "Submitted manufacturer details (CNS Asset Update)",
+        "updated_at": "2025-10-08 10:19:42.283693",
+        "user_id": 1
+    },
+    {
+        "created_at": "2025-10-08 10:20:16.528739",
+        "id": 92,
+        "log_date": "2025-10-08",
+        "task": "Submitted MR for radio media converter (VHF Radios –  Proposed Solution)",
+        "updated_at": "2025-10-08 10:20:16.528756",
+        "user_id": 1
+    },
+    {
+        "created_at": "2025-10-08 12:07:31.780149",
+        "id": 93,
+        "log_date": "2025-10-08",
+        "task": "Inspected all FIDS in the terminal for replacement report.",
+        "updated_at": "2025-10-08 12:07:31.780166",
+        "user_id": 1
+    },
+    {
+        "created_at": "2025-10-09 05:22:33.304075",
+        "id": 94,
+        "log_date": "2025-10-09",
+        "task": "Prepared and submitted FIDS Replacement Shortlisting (Terminal) report",
+        "updated_at": "2025-10-09 10:08:27.574250",
+        "user_id": 1
+    },
+    {
+        "created_at": "2025-10-09 09:37:35.247426",
+        "id": 95,
+        "log_date": "2025-10-09",
+        "task": "Responded to GPS RFI (Clarifications Required on Vendor Queries – GPS Project).",
+        "updated_at": "2025-10-09 09:37:35.247442",
+        "user_id": 1
+    },
+    {
+        "created_at": "2025-10-11 05:32:01.403680",
+        "id": 96,
+        "log_date": "2025-10-10",
+        "task": "Worked on RSMS network diagram drawing",
+        "updated_at": "2025-10-11 05:32:01.403700",
+        "user_id": 1
+    },
+    {
+        "created_at": "2025-10-11 05:32:16.313123",
+        "id": 97,
+        "log_date": "2025-10-11",
+        "task": "Provided an update for (UPS-2 at EATC Datacenter in Bypass Mode)",
+        "updated_at": "2025-10-11 05:32:16.313139",
+        "user_id": 1
+    },
+    {
+        "created_at": "2025-10-11 08:46:50.946764",
+        "id": 98,
+        "log_date": "2025-10-11",
+        "task": "Worked on RSMS drawing",
+        "updated_at": "2025-10-11 08:46:50.946782",
+        "user_id": 1
+    },
+    {
+        "created_at": "2025-10-13 07:50:21.491230",
+        "id": 99,
+        "log_date": "2025-10-13",
+        "task": "Attended Kick-off Meeting for Upgrade of CNS System (AWOS) - Airfield",
+        "updated_at": "2025-10-13 07:50:21.491248",
+        "user_id": 1
+    },
+    {
+        "created_at": "2025-10-13 07:50:44.405072",
+        "id": 100,
+        "log_date": "2025-10-13",
+        "task": "Worked on RSMS drawing",
+        "updated_at": "2025-10-13 07:50:44.405090",
+        "user_id": 1
+    },
+    {
+        "created_at": "2025-10-13 10:56:43.421093",
+        "id": 101,
+        "log_date": "2025-10-13",
+        "task": "Removed FIDS screen from GATE-27",
+        "updated_at": "2025-10-13 10:56:43.421111",
+        "user_id": 1
+    },
+    {
+        "created_at": "2025-10-14 07:41:41.282841",
+        "id": 102,
+        "log_date": "2025-10-14",
+        "task": "Submitted RSMS Network and Power Connectivity Diagram",
+        "updated_at": "2025-10-14 07:41:41.282859",
+        "user_id": 1
+    },
+    {
+        "created_at": "2025-10-14 08:05:57.011982",
+        "id": 103,
+        "log_date": "2025-10-14",
+        "task": "Responded to (Clarifications Required on Vendor Queries – GPS Project)",
+        "updated_at": "2025-10-14 08:05:57.012001",
+        "user_id": 1
+    },
+    {
+        "created_at": "2025-10-14 12:26:00.316453",
+        "id": 104,
+        "log_date": "2025-10-14",
+        "task": "Attended AS – 604 CNS System Induction training",
+        "updated_at": "2025-10-14 12:26:00.316470",
+        "user_id": 1
+    },
+    {
+        "created_at": "2025-10-15 07:55:00.881602",
+        "id": 105,
+        "log_date": "2025-10-15",
+        "task": "submitted work permit for MET & ATC CCTV (Work Permit No: MET & ATC-CCTV Preventive and Corrective Maintenance)",
+        "updated_at": "2025-10-15 07:55:00.881621",
+        "user_id": 1
+    },
+    {
+        "created_at": "2025-10-15 08:30:39.118990",
+        "id": 106,
+        "log_date": "2025-10-15",
+        "task": "responded to (Fw: Urgent: East Expansion UPS System in Critical Condition)",
+        "updated_at": "2025-10-15 08:30:39.119011",
+        "user_id": 1
+    },
+    {
+        "created_at": "2025-10-15 11:10:37.541937",
+        "id": 107,
+        "log_date": "2025-10-15",
+        "task": "Provided FIDS details to marwan.el-sayed@sita.aero",
+        "updated_at": "2025-10-15 11:10:37.541954",
+        "user_id": 1
+    },
+    {
+        "created_at": "2025-10-16 05:00:40.385479",
+        "id": 108,
+        "log_date": "2025-10-16",
+        "task": "Submitted work permit docs for comms (Work Permit No: Maintenance of Communication System)",
+        "updated_at": "2025-10-16 05:00:40.385495",
+        "user_id": 1
+    },
+    {
+        "created_at": "2025-10-16 05:01:13.281473",
+        "id": 109,
+        "log_date": "2025-10-16",
+        "task": "Assisted Thales team with the maintenance of strip printer at EATC.",
+        "updated_at": "2025-10-16 05:01:13.281490",
+        "user_id": 1
+    },
+    {
+        "created_at": "2025-10-16 08:25:43.167485",
+        "id": 110,
+        "log_date": "2025-10-16",
+        "task": "Informed SAA IT about FIDS @ GATE-6 issue (FIDS at Gate-6 Not Operational)",
+        "updated_at": "2025-10-16 08:25:43.167521",
+        "user_id": 1
+    },
+    {
+        "created_at": "2025-10-16 12:10:38.005864",
+        "id": 111,
+        "log_date": "2025-10-16",
+        "task": "attended FM01 meeting",
+        "updated_at": "2025-10-16 12:10:38.005883",
+        "user_id": 1
+    },
+    {
+        "created_at": "2025-10-16 12:10:58.528793",
+        "id": 112,
+        "log_date": "2025-10-16",
+        "task": "changed Athan sound (Changing the Athan sound)",
+        "updated_at": "2025-10-16 12:10:58.528811",
+        "user_id": 1
+    },
+    {
+        "created_at": "2025-10-16 12:27:57.129601",
+        "id": 113,
+        "log_date": "2025-10-16",
+        "task": "Requested for expected timeline of delivery of materials of BSS MR",
+        "updated_at": "2025-10-16 12:27:57.129618",
+        "user_id": 1
+    },
+    {
+        "created_at": "2025-10-17 06:11:41.027637",
+        "id": 114,
+        "log_date": "2025-10-17",
+        "task": "Updated sara regarding UPS-2 in EATC (RE: UPS-2 at EATC Datacenter in Bypass Mode)",
+        "updated_at": "2025-10-17 06:11:41.027655",
+        "user_id": 1
+    },
+    {
+        "created_at": "2025-10-17 06:12:20.808451",
+        "id": 115,
+        "log_date": "2025-10-17",
+        "task": "Removed 2 small UPS's and connected the FSTS's in RX room to main UPS's with Roy",
+        "updated_at": "2025-10-17 06:12:20.808468",
+        "user_id": 1
+    },
+    {
+        "created_at": "2025-10-17 12:02:33.957851",
+        "id": 116,
+        "log_date": "2025-10-17",
+        "task": "responded to (RE: SHJ CVCR - PHX CWP S2C02 u/s)",
+        "updated_at": "2025-10-17 12:02:33.957868",
+        "user_id": 1
+    },
+    {
+        "created_at": "2025-10-17 12:02:57.110335",
+        "id": 117,
+        "log_date": "2025-10-17",
+        "task": "worked on GATE-6 FIDS issue (tried to re-image)",
+        "updated_at": "2025-10-17 12:02:57.110352",
+        "user_id": 1
+    },
+    {
+        "created_at": "2025-10-18 06:10:37.239063",
+        "id": 118,
+        "log_date": "2025-10-18",
+        "task": "Cable crimping in police office nearby fuel station",
+        "updated_at": "2025-10-18 06:10:37.239080",
+        "user_id": 1
+    },
+    {
+        "created_at": "2025-10-18 06:10:54.297574",
+        "id": 119,
+        "log_date": "2025-10-18",
+        "task": "GATE-6 FIDS re-imaging",
+        "updated_at": "2025-10-18 06:10:54.297592",
+        "user_id": 1
+    },
+    {
+        "created_at": "2025-10-20 03:50:31.360879",
+        "id": 120,
+        "log_date": "2025-10-20",
+        "task": "Reviewed and provided feedback: DESIGN AND MATERIAL DOCUMENT for AWOS, VHF RADIOS & CRASH ALARM(Review of Material Datasheets for Crash System, Radio, and AWOS)",
+        "updated_at": "2025-10-20 03:50:31.360899",
+        "user_id": 1
+    },
+    {
+        "created_at": "2025-10-20 03:53:10.204561",
+        "id": 121,
+        "log_date": "2025-10-18",
+        "task": "Attended strip printer issue (paper jam) at MATC (replaced it with the one in EATC) and removed all the papers out.",
+        "updated_at": "2025-10-20 03:53:10.204580",
+        "user_id": 1
+    },
+    {
+        "created_at": "2025-10-20 05:00:40.994061",
+        "id": 122,
+        "log_date": "2025-10-20",
+        "task": "Removed jammed papers of the Thales Topsky printer and returned it to EATC",
+        "updated_at": "2025-10-20 05:00:40.994090",
+        "user_id": 1
+    },
+    {
+        "created_at": "2025-10-20 10:35:53.860667",
+        "id": 123,
+        "log_date": "2025-10-20",
+        "task": "Setup automation script to prep .bid files of NCM monthly report.",
+        "updated_at": "2025-10-20 10:35:53.860687",
+        "user_id": 1
+    },
+    {
+        "created_at": "2025-10-20 10:55:26.334795",
+        "id": 124,
+        "log_date": "2025-10-20",
+        "task": "Replaced defective RSMS HDD (SN: ZC10YDLB) with a spare unit (SN: 52V0A004FYWG).",
+        "updated_at": "2025-10-20 10:55:26.334814",
+        "user_id": 1
+    },
+    {
+        "created_at": "2025-10-22 05:58:16.188581",
+        "id": 125,
+        "log_date": "2025-10-22",
+        "task": "handed over defective radios and antenna to lambda (S/N: 93003971 and 93003679)",
+        "updated_at": "2025-10-22 05:58:16.188601",
+        "user_id": 1
+    },
+    {
+        "created_at": "2025-10-22 05:58:49.553137",
+        "id": 126,
+        "log_date": "2025-10-22",
+        "task": "Installed LG screen (replacement of defective FIDS controller) at GATE 6 as per Mr. Hassan advise",
+        "updated_at": "2025-10-22 05:58:49.553156",
+        "user_id": 1
+    },
+    {
+        "created_at": "2025-10-22 06:42:46.368491",
+        "id": 127,
+        "log_date": "2025-10-22",
+        "task": "Responded to (Removal of Standalone UPS Units in RX Room)",
+        "updated_at": "2025-10-22 06:42:46.368536",
+        "user_id": 1
+    },
+    {
+        "created_at": "2025-10-22 06:53:01.733005",
+        "id": 128,
+        "log_date": "2025-10-22",
+        "task": "Provided URL config for (VIP lounge Fids issue)",
+        "updated_at": "2025-10-22 06:53:01.733025",
+        "user_id": 1
+    },
+    {
+        "created_at": "2025-10-22 07:17:09.686757",
+        "id": 129,
+        "log_date": "2025-10-22",
+        "task": "Provided response to RFI-3 (Clarifications Required on Vendor Queries - Cyber Security)",
+        "updated_at": "2025-10-22 07:17:09.686774",
+        "user_id": 1
+    },
+    {
+        "created_at": "2025-10-22 07:26:45.807634",
+        "id": 130,
+        "log_date": "2025-10-21",
+        "task": "Cleaned RSMS cameras (except GP)",
+        "updated_at": "2025-10-22 07:26:45.807652",
+        "user_id": 1
+    },
+    {
+        "created_at": "2025-10-22 07:53:13.246683",
+        "id": 131,
+        "log_date": "2025-10-22",
+        "task": "Responded to (Clarifications Required on Vendor Queries - Cyber Security) (Wednesday, October 22, 2025 8:11 AM)",
+        "updated_at": "2025-10-22 07:53:13.246702",
+        "user_id": 1
+    },
+    {
+        "created_at": "2025-10-22 12:17:02.527852",
+        "id": 132,
+        "log_date": "2025-10-22",
+        "task": "Responded to (P6 work survey in fire station)",
+        "updated_at": "2025-10-22 12:17:02.527872",
+        "user_id": 1
+    },
+    {
+        "created_at": "2025-10-23 04:49:21.348021",
+        "id": 133,
+        "log_date": "2025-10-23",
+        "task": "Request to create a new email account for CNS Technician Muhammad Owais (Employee ID: 121547). TicketNo=ENR2025:022441",
+        "updated_at": "2025-10-23 04:49:21.348039",
+        "user_id": 1
+    },
+    {
+        "created_at": "2025-10-23 05:56:02.791888",
+        "id": 134,
+        "log_date": "2025-10-23",
+        "task": "responded to (Site Visit - GPS Project )",
+        "updated_at": "2025-10-23 05:56:02.791908",
+        "user_id": 1
+    },
+    {
+        "created_at": "2025-10-23 06:06:24.491847",
+        "id": 135,
+        "log_date": "2025-10-23",
+        "task": "Followed up on (Request for Estimated Material Delivery Date)",
+        "updated_at": "2025-10-23 06:06:24.491867",
+        "user_id": 1
+    },
+    {
+        "created_at": "2025-10-23 12:17:34.791533",
+        "id": 136,
+        "log_date": "2025-10-23",
+        "task": "Responded to (Newly Installed VHF Radios Complaints Handling)",
+        "updated_at": "2025-10-23 12:17:34.791558",
+        "user_id": 1
+    },
+    {
+        "created_at": "2025-10-24 05:22:45.861023",
+        "id": 137,
+        "log_date": "2025-10-24",
+        "task": "VCCS phone update Mr. Sabu (Phone number change)",
+        "updated_at": "2025-10-24 05:22:45.861041",
+        "user_id": 1
+    },
+    {
+        "created_at": "2025-10-24 07:56:42.547777",
+        "id": 138,
+        "log_date": "2025-10-24",
+        "task": "Created AMHS address book backup (OFC-1)",
+        "updated_at": "2025-10-24 07:56:42.547796",
+        "user_id": 1
+    },
+    {
+        "created_at": "2025-10-24 07:57:00.639521",
+        "id": 139,
+        "log_date": "2025-10-24",
+        "task": "Updated AMHS address book on VCR-1.",
+        "updated_at": "2025-10-24 07:57:00.639540",
+        "user_id": 1
+    },
+    {
+        "created_at": "2025-10-24 10:23:38.478389",
+        "id": 140,
+        "log_date": "2025-10-24",
+        "task": "Reviewed and provided recommendations, queries, and remarks on the design documents for the CNS Upgrade Project (AWOS, VHF Radios, and Crash Alarm System).",
+        "updated_at": "2025-10-24 10:23:38.478406",
+        "user_id": 1
+    },
+    {
+        "created_at": "2025-10-25 05:34:28.349301",
+        "id": 141,
+        "log_date": "2025-10-25",
+        "task": "Reviewed and submitted design documents for CNS upgrade projects (AWOS, VHF RADIOS & CRASH ALARM)",
+        "updated_at": "2025-10-25 05:34:28.349318",
+        "user_id": 1
+    },
+    {
+        "created_at": "2025-10-25 05:38:48.987397",
+        "id": 142,
+        "log_date": "2025-10-25",
+        "task": "Responded to (Clarifications Required on Vendor Queries - GPS )",
+        "updated_at": "2025-10-25 05:38:48.987414",
+        "user_id": 1
+    },
+    {
+        "created_at": "2025-10-25 11:19:00.388391",
+        "id": 143,
+        "log_date": "2025-10-25",
+        "task": "Updated Marwan regarding printer change (DCP Template Change: GATE-1A)",
+        "updated_at": "2025-10-25 11:19:00.388409",
+        "user_id": 1
+    },
+    {
+        "created_at": "2025-10-27 11:12:21.491941",
+        "id": 144,
+        "log_date": "2025-10-27",
+        "task": "Reported FIDS issue (FIDS Screen at Counter-44 Not Operational)",
+        "updated_at": "2025-10-27 11:12:21.491959",
+        "user_id": 1
+    },
+    {
+        "created_at": "2025-10-27 11:12:44.012585",
+        "id": 145,
+        "log_date": "2025-10-27",
+        "task": "Attended CNS systems upgraded design doc review meeting with SAA",
+        "updated_at": "2025-10-27 11:12:44.012603",
+        "user_id": 1
+    },
+    {
+        "created_at": "2025-10-27 11:13:25.776514",
+        "id": 146,
+        "log_date": "2025-10-27",
+        "task": "Requested Eng. Sara Civil to assist with (Support Request to Address Client Observations)",
+        "updated_at": "2025-10-27 11:13:25.776533",
+        "user_id": 1
+    },
+    {
+        "created_at": "2025-10-27 11:13:51.080537",
+        "id": 147,
+        "log_date": "2025-10-27",
+        "task": "Followed up on (RE: Request for Estimated Material Delivery Date)",
+        "updated_at": "2025-10-27 11:13:51.080555",
+        "user_id": 1
+    },
+    {
+        "created_at": "2025-10-27 11:14:06.382593",
+        "id": 148,
+        "log_date": "2025-10-27",
+        "task": "Conducted OTDR test (Cargo 4 camera)",
+        "updated_at": "2025-10-27 11:14:06.382610",
+        "user_id": 1
+    },
+    {
+        "created_at": "2025-10-27 11:14:43.927274",
+        "id": 149,
+        "log_date": "2025-10-27",
+        "task": "Requested for replacement of spare HDD for RSMS (RE: Guidance on Defective HDD Disposal and Replacement Procedure)",
+        "updated_at": "2025-10-27 11:14:43.927291",
+        "user_id": 1
+    },
+    {
+        "created_at": "2025-10-27 12:20:24.405881",
+        "id": 150,
+        "log_date": "2025-10-27",
+        "task": "Provided review feedback on Bayanat's site survey report on 21-Oct-25(Re: SIA Updated AIP - Safety Area )",
+        "updated_at": "2025-10-27 12:20:24.405899",
+        "user_id": 1
+    },
+    {
+        "created_at": "2025-10-28 05:56:08.706272",
+        "id": 151,
+        "log_date": "2025-10-28",
+        "task": "Replaced FIDS at counter 44 (•\tMAC Address: 7C:64:6C:05:D6:C5\r\n•\tS/N: 211INRC7D110)",
+        "updated_at": "2025-10-28 05:56:08.706290",
+        "user_id": 1
+    },
+    {
+        "created_at": "2025-10-28 06:18:21.738092",
+        "id": 152,
+        "log_date": "2025-10-28",
+        "task": "EATC RSMS camera adjustment (Roderic ) (Camera Adjustment at EATC)",
+        "updated_at": "2025-10-28 06:18:21.738110",
+        "user_id": 1
+    },
+    {
+        "created_at": "2025-10-28 06:19:15.263691",
+        "id": 153,
+        "log_date": "2025-10-28",
+        "task": "Attended EATC UPS-2 Discussion Meeting",
+        "updated_at": "2025-10-28 06:19:15.263710",
+        "user_id": 1
+    },
+    {
+        "created_at": "2025-10-28 06:19:40.097888",
+        "id": 154,
+        "log_date": "2025-10-28",
+        "task": "Attended SHJ PHX Spares meeting",
+        "updated_at": "2025-10-28 06:19:40.097906",
+        "user_id": 1
+    },
+    {
+        "created_at": "2025-10-29 03:40:48.159680",
+        "id": 155,
+        "log_date": "2025-10-28",
+        "task": "Adjusted NEW RSMS camera in EATC",
+        "updated_at": "2025-10-29 03:40:48.159699",
+        "user_id": 1
+    },
+    {
+        "created_at": "2025-10-29 04:35:44.425804",
+        "id": 156,
+        "log_date": "2025-10-29",
+        "task": "Gate 8 SITA monitor replaced",
+        "updated_at": "2025-10-29 04:35:44.425823",
+        "user_id": 1
+    },
+    {
+        "created_at": "2025-10-29 05:57:45.440997",
+        "id": 157,
+        "log_date": "2025-10-29",
+        "task": "Assisted vendors with site survey for GPS/TRS RFP (RE: Site Visit - GPS Project )",
+        "updated_at": "2025-10-29 05:58:12.166804",
+        "user_id": 1
+    },
+    {
+        "created_at": "2025-10-29 10:06:26.481558",
+        "id": 158,
+        "log_date": "2025-10-29",
+        "task": "provided HP printer details to Enova IT to Malik",
+        "updated_at": "2025-10-29 10:06:26.481580",
+        "user_id": 1
+    },
+    {
+        "created_at": "2025-10-29 10:40:54.445154",
+        "id": 159,
+        "log_date": "2025-10-29",
+        "task": "Provided an update for the estimated delivery timeline of MR (VHF Radios - Proposed Solution)",
+        "updated_at": "2025-10-29 10:40:54.445172",
+        "user_id": 1
+    },
+    {
+        "created_at": "2025-10-29 12:09:00.061224",
+        "id": 160,
+        "log_date": "2025-10-29",
+        "task": "Fixed counter 44 issue by replacing the screen with a new one (RE: FIDS Screen at Counter-44 Not Operational)",
+        "updated_at": "2025-10-29 12:09:00.061256",
+        "user_id": 1
+    },
+    {
+        "created_at": "2025-10-30 07:54:13.219171",
+        "id": 161,
+        "log_date": "2025-10-30",
+        "task": "Responded to (screen damage on Gate 8)",
+        "updated_at": "2025-10-30 07:54:13.219188",
+        "user_id": 1
+    },
+    {
+        "created_at": "2025-10-30 07:55:03.814018",
+        "id": 162,
+        "log_date": "2025-10-30",
+        "task": "Fixed S1C01 issue (PHX ADC) by replacing the workstation with a spare unit.",
+        "updated_at": "2025-10-30 07:55:03.814036",
+        "user_id": 1
+    },
+    {
+        "created_at": "2025-10-30 07:55:37.103005",
+        "id": 163,
+        "log_date": "2025-10-30",
+        "task": "Assisted IBG and ICAD with CNS DC site survey",
+        "updated_at": "2025-10-30 07:55:37.103024",
+        "user_id": 1
+    },
+    {
+        "created_at": "2025-10-30 08:02:18.357853",
+        "id": 164,
+        "log_date": "2025-10-30",
+        "task": "Responded to (Request for Screen Repair or Replacement)",
+        "updated_at": "2025-10-30 08:02:18.357871",
+        "user_id": 1
+    },
+    {
+        "created_at": "2025-10-30 13:23:27.770681",
+        "id": 165,
+        "log_date": "2025-10-30",
+        "task": "Reviewed and responded to (RE: Review of Material Datasheets for Crash System, Radio, and AWOS)",
+        "updated_at": "2025-10-30 13:23:27.770699",
+        "user_id": 1
+    },
+    {
+        "created_at": "2025-10-30 13:23:55.486294",
+        "id": 166,
+        "log_date": "2025-10-30",
+        "task": "Informed client about (PHX Workstation S1C01 - Hardware Failure and Replacement Update)",
+        "updated_at": "2025-10-30 13:23:55.486314",
+        "user_id": 1
+    },
+    {
+        "created_at": "2025-10-31 05:50:12.172380",
+        "id": 167,
+        "log_date": "2025-10-31",
+        "task": "Cleaned all AWOS sensor's",
+        "updated_at": "2025-10-31 05:50:12.172399",
+        "user_id": 1
+    },
+    {
+        "created_at": "2025-10-31 07:37:34.896323",
+        "id": 168,
+        "log_date": "2025-10-31",
+        "task": "Provided voice and RDD recording (Recording Request)",
+        "updated_at": "2025-10-31 07:37:34.896342",
+        "user_id": 1
+    },
+    {
+        "created_at": "2025-10-31 07:58:17.580624",
+        "id": 169,
+        "log_date": "2025-10-31",
+        "task": "Requested a spare workstation (PHX Workstation S1C01 - Hardware Failure and Replacement Update)",
+        "updated_at": "2025-10-31 07:58:17.580646",
+        "user_id": 1
+    },
+    {
+        "created_at": "2025-10-31 09:42:01.011336",
+        "id": 170,
+        "log_date": "2025-10-31",
+        "task": "Updated AMHS address as per Mr. Sabu request",
+        "updated_at": "2025-10-31 09:42:01.011353",
+        "user_id": 1
+    },
+    {
+        "created_at": "2025-11-01 04:27:07.125623",
+        "id": 171,
+        "log_date": "2025-11-01",
+        "task": "extracted and shared with NCM AWOS history files for OCTOBER 2025",
+        "updated_at": "2025-11-01 04:27:07.125643",
+        "user_id": 1
+    },
+    {
+        "created_at": "2025-11-01 04:33:42.798125",
+        "id": 172,
+        "log_date": "2025-11-01",
+        "task": "Prepared and shared Monthly AWOS Calibration Report with NCM",
+        "updated_at": "2025-11-01 04:33:42.798143",
+        "user_id": 1
+    },
+    {
+        "created_at": "2025-11-01 10:11:45.409077",
+        "id": 173,
+        "log_date": "2025-11-01",
+        "task": "provided no. of switches, locations and fiber cores (CNS-MET-ATM DC visit and requirement collection)",
+        "updated_at": "2025-11-01 10:11:45.409096",
+        "user_id": 1
+    },
+    {
+        "created_at": "2025-11-01 11:05:38.738842",
+        "id": 174,
+        "log_date": "2025-11-01",
+        "task": "responded to (Request for Screen Repair or Replacement)",
+        "updated_at": "2025-11-01 11:05:38.738859",
+        "user_id": 1
+    },
+    {
+        "created_at": "2025-11-03 03:49:02.325253",
+        "id": 175,
+        "log_date": "2025-11-03",
+        "task": "Fixed time sync issue on AF OPS AWOS workstation.",
+        "updated_at": "2025-11-03 03:49:02.325272",
+        "user_id": 1
+    },
+    {
+        "created_at": "2025-11-03 09:51:42.221080",
+        "id": 176,
+        "log_date": "2025-11-03",
+        "task": "Assisted SZC with update of CADAS terminal's",
+        "updated_at": "2025-11-03 09:51:42.221100",
+        "user_id": 1
+    },
+    {
+        "created_at": "2025-11-03 10:08:07.106559",
+        "id": 177,
+        "log_date": "2025-11-03",
+        "task": "submitted FM01 operational report",
+        "updated_at": "2025-11-03 10:08:07.106578",
+        "user_id": 1
+    },
+    {
+        "created_at": "2025-11-03 10:08:18.980828",
+        "id": 178,
+        "log_date": "2025-11-03",
+        "task": "submitted FM02 operational report",
+        "updated_at": "2025-11-03 10:08:18.980854",
+        "user_id": 1
+    },
+    {
+        "created_at": "2025-11-03 11:16:55.471950",
+        "id": 179,
+        "log_date": "2025-11-03",
+        "task": "provided RVR distance from THR RWY 12 side (RE: RVR Locations - AIP)",
+        "updated_at": "2025-11-03 11:16:55.471968",
+        "user_id": 1
+    },
+    {
+        "created_at": "2025-11-05 04:02:28.380382",
+        "id": 180,
+        "log_date": "2025-11-04",
+        "task": "Received and Handed over the two handheld vhf radios to end user. Updated SAA (NCR Issuance - PNP 891:Replacement of VHF radios ) Tue 11/4/2025 4:31 PM",
+        "updated_at": "2025-11-05 04:02:52.381270",
+        "user_id": 1
+    },
+    {
+        "created_at": "2025-11-05 04:03:55.985559",
+        "id": 181,
+        "log_date": "2025-11-04",
+        "task": "Responded to (RVR Locations - AIP) Tue 11/4/2025 3:36 PM",
+        "updated_at": "2025-11-05 04:03:55.985578",
+        "user_id": 1
+    },
+    {
+        "created_at": "2025-11-05 04:04:21.111642",
+        "id": 182,
+        "log_date": "2025-11-04",
+        "task": "Submitted MR (MR for Spare HDD Replenishment (MR 0026-2025 Spare HDD for RSMS))",
+        "updated_at": "2025-11-05 04:04:21.111662",
+        "user_id": 1
+    },
+    {
+        "created_at": "2025-11-05 04:04:38.642877",
+        "id": 183,
+        "log_date": "2025-11-04",
+        "task": "Responded to (Guidance on Defective HDD Disposal and Replacement Procedure)",
+        "updated_at": "2025-11-05 04:05:43.869302",
+        "user_id": 1
+    },
+    {
+        "created_at": "2025-11-05 04:04:52.974968",
+        "id": 184,
+        "log_date": "2025-11-04",
+        "task": "Amended (Monthly Operational Report FM01-MET & FM02-IT)",
+        "updated_at": "2025-11-05 04:05:49.813116",
+        "user_id": 1
+    },
+    {
+        "created_at": "2025-11-05 04:05:21.383074",
+        "id": 185,
+        "log_date": "2025-11-04",
+        "task": "Updated FM01-MoM",
+        "updated_at": "2025-11-05 04:05:21.383092",
+        "user_id": 1
+    },
+    {
+        "created_at": "2025-11-05 06:30:03.347553",
+        "id": 186,
+        "log_date": "2025-11-05",
+        "task": "Gave training to the trainee from project section (eng. Moza)",
+        "updated_at": "2025-11-05 06:30:03.347572",
+        "user_id": 1
+    },
+    {
+        "created_at": "2025-11-05 08:11:36.762848",
+        "id": 187,
+        "log_date": "2025-11-05",
+        "task": "Submitted MR (MR 0029-2025 Spare HDD for PHX)",
+        "updated_at": "2025-11-05 08:11:36.762866",
+        "user_id": 1
+    },
+    {
+        "created_at": "2025-11-05 08:11:57.854294",
+        "id": 188,
+        "log_date": "2025-11-05",
+        "task": "Submitted MR (Submission of MR 0027-2025 - Spare HDD for RSMS)",
+        "updated_at": "2025-11-05 08:11:57.854313",
+        "user_id": 1
+    },
+    {
+        "created_at": "2025-11-05 08:46:00.491926",
+        "id": 189,
+        "log_date": "2025-11-05",
+        "task": "Responded to (RE: SHJ PHX Spares)",
+        "updated_at": "2025-11-05 08:46:00.491946",
+        "user_id": 1
+    },
+    {
+        "created_at": "2025-11-05 11:42:58.746594",
+        "id": 190,
+        "log_date": "2025-11-05",
+        "task": "Conducted survey for SNMP access of UPS-1 & UPS-2 (EATC) in the monitoring room.",
+        "updated_at": "2025-11-05 11:42:58.746612",
+        "user_id": 1
+    },
+    {
+        "created_at": "2025-11-05 12:32:14.967635",
+        "id": 191,
+        "log_date": "2025-11-05",
+        "task": "Responded to (RE: Vendors Site visit - Cybersecurity )",
+        "updated_at": "2025-11-05 12:32:14.967657",
+        "user_id": 1
+    },
+    {
+        "created_at": "2025-11-06 06:14:42.443420",
+        "id": 192,
+        "log_date": "2025-11-06",
+        "task": "Provided Visibility Thresholds for LVO Operations to Eng. Seif",
+        "updated_at": "2025-11-06 06:14:42.443439",
+        "user_id": 1
+    },
+    {
+        "created_at": "2025-11-06 08:08:15.763682",
+        "id": 193,
+        "log_date": "2025-11-06",
+        "task": "Responded to (Your Cyber Security Training - Albert)",
+        "updated_at": "2025-11-06 08:08:15.763702",
+        "user_id": 1
+    },
+    {
+        "created_at": "2025-11-06 08:08:28.255825",
+        "id": 194,
+        "log_date": "2025-11-06",
+        "task": "Responded to (MISSING IT EQUIPMENTS AT CHECK IN COUNTERS)",
+        "updated_at": "2025-11-06 08:08:28.255845",
+        "user_id": 1
+    },
+    {
+        "created_at": "2025-11-10 03:53:10.520993",
+        "id": 195,
+        "log_date": "2025-11-08",
+        "task": "Fixed (BMS connectivity issue for New engineering PC)",
+        "updated_at": "2025-11-10 03:54:10.228804",
+        "user_id": 1
+    },
+    {
+        "created_at": "2025-11-10 03:53:37.901781",
+        "id": 196,
+        "log_date": "2025-11-08",
+        "task": "Requested for (GP-12 Camera Cleaning ATC Request)",
+        "updated_at": "2025-11-10 03:53:37.901799",
+        "user_id": 1
+    },
+    {
+        "created_at": "2025-11-10 10:53:15.361889",
+        "id": 197,
+        "log_date": "2025-11-10",
+        "task": "cleaned GP-12 cam (Fw: [EXTERNAL] GP-12 RSMS Camera Cleaning Request)",
+        "updated_at": "2025-11-10 10:53:15.361907",
+        "user_id": 1
+    },
+    {
+        "created_at": "2025-11-11 07:51:08.920337",
+        "id": 198,
+        "log_date": "2025-11-11",
+        "task": "provided response to (Re: Vendor Questionnaire - Cybersecurity )",
+        "updated_at": "2025-11-11 07:51:08.920356",
+        "user_id": 1
+    },
+    {
+        "created_at": "2025-11-12 10:30:48.638113",
+        "id": 199,
+        "log_date": "2025-11-12",
+        "task": "Assisted bayanat with site survey for TRS project",
+        "updated_at": "2025-11-12 10:30:48.638131",
+        "user_id": 1
+    },
+    {
+        "created_at": "2025-11-12 10:31:45.458312",
+        "id": 200,
+        "log_date": "2025-11-12",
+        "task": "Assisted ICAD & IBGOW teams during the site survey for the new CNS Data Center project.",
+        "updated_at": "2025-11-12 10:31:45.458329",
+        "user_id": 1
+    },
+    {
+        "created_at": "2025-11-12 10:32:01.790981",
+        "id": 201,
+        "log_date": "2025-11-12",
+        "task": "provided printer report to Malik",
+        "updated_at": "2025-11-12 10:32:01.791000",
+        "user_id": 1
+    },
+    {
+        "created_at": "2025-11-12 10:53:29.918619",
+        "id": 202,
+        "log_date": "2025-11-12",
+        "task": "Cargo-4 Camera Connectivity Issue Resolved",
+        "updated_at": "2025-11-12 10:53:29.918637",
+        "user_id": 1
+    },
+    {
+        "created_at": "2025-11-12 11:20:47.037665",
+        "id": 203,
+        "log_date": "2025-11-12",
+        "task": "Reported (Gate 5 Smart Gate - Emergency Button Malfunction)",
+        "updated_at": "2025-11-12 11:20:47.037684",
+        "user_id": 1
+    },
+    {
+        "created_at": "2025-11-13 09:38:03.285825",
+        "id": 204,
+        "log_date": "2025-11-12",
+        "task": "Removed PDU in Cargo-4 camera (Subin)",
+        "updated_at": "2025-11-13 09:38:03.285843",
+        "user_id": 1
+    },
+    {
+        "created_at": "2025-11-13 09:38:32.797217",
+        "id": 205,
+        "log_date": "2025-11-13",
+        "task": "Verified AMHS address of CADAS terminal 2 and prepared for collection by SZC",
+        "updated_at": "2025-11-13 09:38:32.797235",
+        "user_id": 1
+    },
+    {
+        "created_at": "2025-11-13 09:39:13.174318",
+        "id": 206,
+        "log_date": "2025-11-13",
+        "task": "Attended Cybersecurity of CNS data center project meeting and answered vendor query's",
+        "updated_at": "2025-11-13 09:39:13.174338",
+        "user_id": 1
+    },
+    {
+        "created_at": "2025-11-13 09:39:27.568720",
+        "id": 207,
+        "log_date": "2025-11-13",
+        "task": "Attended meeting with Kirin and Reddy",
+        "updated_at": "2025-11-13 09:39:27.568737",
+        "user_id": 1
+    },
+    {
+        "created_at": "2025-11-13 09:49:00.941376",
+        "id": 208,
+        "log_date": "2025-11-13",
+        "task": "raised MR (MR for Remote Monitoring of UPS-1 and UPS-2 at EATC (SNMP): 0031/2025/12/CNS/HK/HK)",
+        "updated_at": "2025-11-13 09:49:00.941394",
+        "user_id": 1
+    },
+    {
+        "created_at": "2025-11-14 06:16:54.947635",
+        "id": 209,
+        "log_date": "2025-11-14",
+        "task": "provided (PTZ Recording Request)",
+        "updated_at": "2025-11-14 06:16:54.947658",
+        "user_id": 1
+    },
+    {
+        "created_at": "2025-11-14 06:17:07.733114",
+        "id": 210,
+        "log_date": "2025-11-14",
+        "task": "Provided (ATC Voice Recording Request - 13 Nov 25)",
+        "updated_at": "2025-11-14 06:17:07.733132",
+        "user_id": 1
+    },
+    {
+        "created_at": "2025-11-14 06:17:28.783914",
+        "id": 211,
+        "log_date": "2025-11-14",
+        "task": "submitted MR (MR for Remote Monitoring of UPS-1 and UPS-2 at EATC (SNMP): 0031/2025/12/CNS/HK/HK) to store",
+        "updated_at": "2025-11-14 06:17:28.783933",
+        "user_id": 1
+    },
+    {
+        "created_at": "2025-11-15 10:24:02.266174",
+        "id": 212,
+        "log_date": "2025-11-15",
+        "task": "Provided FO core count and requirements to the new DC (CNS-MET-ATM DC visit and requirement collection)",
+        "updated_at": "2025-11-15 10:24:02.266195",
+        "user_id": 1
+    },
+    {
+        "created_at": "2025-11-15 11:03:22.030395",
+        "id": 213,
+        "log_date": "2025-11-15",
+        "task": "submitted SITA health report",
+        "updated_at": "2025-11-15 11:03:22.030414",
+        "user_id": 1
+    },
+    {
+        "created_at": "2025-11-17 06:21:15.561588",
+        "id": 214,
+        "log_date": "2025-11-17",
+        "task": "Provided RFI response Bayanat TRS (Re: Clarifications Required on Vendor Queries – GPS Project)",
+        "updated_at": "2025-11-17 06:21:15.561607",
+        "user_id": 1
+    },
+    {
+        "created_at": "2025-11-17 09:32:54.985462",
+        "id": 215,
+        "log_date": "2025-11-17",
+        "task": "Requested for spare workstation from DANS (RE: SHJ PHX Spares)",
+        "updated_at": "2025-11-17 09:32:54.985481",
+        "user_id": 1
+    },
+    {
+        "created_at": "2025-11-17 09:33:21.742136",
+        "id": 216,
+        "log_date": "2025-11-17",
+        "task": "Attended (RE: [EXTERNAL] 2071 | SP3/NAV/006-1 New ATM System | Engineering training preparation)",
+        "updated_at": "2025-11-17 09:33:21.742154",
+        "user_id": 1
+    },
+    {
+        "created_at": "2025-11-17 12:01:40.438635",
+        "id": 217,
+        "log_date": "2025-11-17",
+        "task": "Responded to Bayanat RFP for AWOS and crash alarm (FW: SIA Updated AIP - Safety Area ) (Mon 11/17/2025 4:00 PM)",
+        "updated_at": "2025-11-17 12:01:40.438655",
+        "user_id": 1
+    },
+    {
+        "created_at": "2025-11-19 06:00:49.600334",
+        "id": 218,
+        "log_date": "2025-11-19",
+        "task": "Provided details for (Fw: Minutes of Meeting_13Nov_Cybersecurity for CNS Systems - IP/1007/2025)",
+        "updated_at": "2025-11-19 06:00:49.600353",
+        "user_id": 1
+    },
+    {
+        "created_at": "2025-11-19 07:04:44.164515",
+        "id": 219,
+        "log_date": "2025-11-19",
+        "task": "Updated (Review and update of CNS Work in Progress & Risk Register)",
+        "updated_at": "2025-11-19 07:04:44.164533",
+        "user_id": 1
+    },
+    {
+        "created_at": "2025-11-21 06:42:58.011127",
+        "id": 220,
+        "log_date": "2025-11-21",
+        "task": "Assisted sirijtech with testing of PTZ1, 2&3 with new RSMS",
+        "updated_at": "2025-11-21 06:42:58.011144",
+        "user_id": 1
+    },
+    {
+        "created_at": "2025-11-21 06:43:37.082354",
+        "id": 221,
+        "log_date": "2025-11-21",
+        "task": "Assisted Bayanat with site survey and marking of new AWOS sensor's",
+        "updated_at": "2025-11-21 06:43:37.082371",
+        "user_id": 1
+    },
+    {
+        "created_at": "2025-11-22 17:05:54.614684",
+        "id": 222,
+        "log_date": "2025-11-22",
+        "task": "Assisted Bayanat with marking of AWOS sensor's locations",
+        "updated_at": "2025-11-22 17:05:54.614703",
+        "user_id": 1
+    },
+    {
+        "created_at": "2025-11-28 04:23:30.277841",
+        "id": 223,
+        "log_date": "2025-11-28",
+        "task": "Updated AMHS tables (AMC OPER 282)",
+        "updated_at": "2025-11-28 04:23:30.277859",
+        "user_id": 1
+    },
+    {
+        "created_at": "2025-11-29 08:36:06.092494",
+        "id": 224,
+        "log_date": "2025-11-29",
+        "task": "updated AMHS address book of VCR-1 Pos as per Mr. Sabu request",
+        "updated_at": "2025-11-29 08:36:06.092529",
+        "user_id": 1
+    },
+    {
+        "created_at": "2025-12-03 08:48:10.304881",
+        "id": 225,
+        "log_date": "2025-12-03",
+        "task": "LLZ-12 Ground Check",
+        "updated_at": "2025-12-03 08:48:10.304898",
+        "user_id": 1
+    },
+    {
+        "created_at": "2025-12-04 12:21:42.341720",
+        "id": 226,
+        "log_date": "2025-12-04",
+        "task": "submitted monthly operational reports",
+        "updated_at": "2025-12-04 12:21:42.341739",
+        "user_id": 1
+    },
+    {
+        "created_at": "2025-12-04 12:21:59.622425",
+        "id": 227,
+        "log_date": "2025-12-04",
+        "task": "responded to (IT clearance 28.11.2025)",
+        "updated_at": "2025-12-04 12:21:59.622442",
+        "user_id": 1
+    },
+    {
+        "created_at": "2025-12-04 12:22:15.029158",
+        "id": 228,
+        "log_date": "2025-12-04",
+        "task": "Provided noise log for (Notification of Excessive Noise from Newly Installed RSMS Servers in CNS Data Center)",
+        "updated_at": "2025-12-04 12:22:15.029176",
+        "user_id": 1
+    },
+    {
+        "created_at": "2025-12-04 12:22:39.235148",
+        "id": 229,
+        "log_date": "2025-12-04",
+        "task": "Submitted FIDS & SITA health and breakdown report",
+        "updated_at": "2025-12-04 12:22:39.235167",
+        "user_id": 1
+    },
+    {
+        "created_at": "2025-12-04 12:23:13.850342",
+        "id": 230,
+        "log_date": "2025-12-04",
+        "task": "Attended ADP training and assessment",
+        "updated_at": "2025-12-04 12:23:13.850359",
+        "user_id": 1
+    },
+    {
+        "created_at": "2025-12-05 07:47:00.887444",
+        "id": 231,
+        "log_date": "2025-12-05",
+        "task": "Provided Technical Challenges we are facing while implementing cybersecurity in CNS Systems (Re: Cybersecurity of the CNS Systems - Technical Challenges)",
+        "updated_at": "2025-12-05 07:47:00.887463",
+        "user_id": 1
+    },
+    {
+        "created_at": "2025-12-05 09:48:03.088132",
+        "id": 232,
+        "log_date": "2025-12-05",
+        "task": "Updated MoM",
+        "updated_at": "2025-12-05 09:48:03.088150",
+        "user_id": 1
+    },
+    {
+        "created_at": "2025-12-06 10:59:21.453228",
+        "id": 233,
+        "log_date": "2025-12-06",
+        "task": "Assisted Bayanat with underground cable scanning and opening manholes",
+        "updated_at": "2025-12-06 10:59:21.453247",
+        "user_id": 1
+    },
+    {
+        "created_at": "2025-12-07 10:08:50.950950",
+        "id": 234,
+        "log_date": "2025-12-07",
+        "task": "Followed up with Leo regarding amhs@enova-me.com issue",
+        "updated_at": "2025-12-07 10:08:50.950967",
+        "user_id": 1
+    },
+    {
+        "created_at": "2025-12-08 08:13:09.831255",
+        "id": 235,
+        "log_date": "2025-12-08",
+        "task": "Prepared and provided network and power connectivity diagrams to the new RSMS project.",
+        "updated_at": "2025-12-08 08:13:09.831280",
+        "user_id": 1
+    },
+    {
+        "created_at": "2025-12-08 12:10:40.381979",
+        "id": 236,
+        "log_date": "2025-12-08",
+        "task": "Resolved RSMS & AIMS link issue.",
+        "updated_at": "2025-12-08 12:10:40.381997",
+        "user_id": 1
+    },
+    {
+        "created_at": "2025-12-09 10:15:39.407483",
+        "id": 237,
+        "log_date": "2025-12-09",
+        "task": "Provided (CNS Achievement report 2025)",
+        "updated_at": "2025-12-09 10:15:39.407521",
+        "user_id": 1
+    },
+    {
+        "created_at": "2025-12-10 07:09:00.755585",
+        "id": 238,
+        "log_date": "2025-12-10",
+        "task": "Responded to (Minutes of Meeting_13Nov_Cybersecurity for CNS Systems - IP/1007/2025)",
+        "updated_at": "2025-12-10 07:09:00.755604",
+        "user_id": 1
+    },
+    {
+        "created_at": "2025-12-10 12:48:50.974280",
+        "id": 239,
+        "log_date": "2025-12-10",
+        "task": "fixed ups issue (URGENT: UPS Failure Risking SITA Core Switch Power - Immediate Action Required)",
+        "updated_at": "2025-12-10 12:48:50.974297",
+        "user_id": 1
+    },
+    {
+        "created_at": "2025-12-11 11:22:42.432351",
+        "id": 240,
+        "log_date": "2025-12-11",
+        "task": "Replaced TEMPERATURE & HUMIDITY PROBE HMP155 with a calibrated unit. S/N: V5120706",
+        "updated_at": "2025-12-11 11:22:42.432370",
+        "user_id": 1
+    },
+    {
+        "created_at": "2025-12-11 12:34:01.061813",
+        "id": 241,
+        "log_date": "2025-12-11",
+        "task": "Resolved the issue with AMHS and AIMS link by disabling MAF on AMHS@ENOVA-ME.COM. (shjfmxh@sharjaairport.ae) (OMSJYFYX)",
+        "updated_at": "2025-12-11 12:34:01.061845",
+        "user_id": 1
+    },
+    {
+        "created_at": "2025-12-12 05:52:35.946274",
+        "id": 242,
+        "log_date": "2025-12-11",
+        "task": "attended operational meeting",
+        "updated_at": "2025-12-12 05:52:35.946291",
+        "user_id": 1
+    },
+    {
+        "created_at": "2025-12-12 06:38:22.327812",
+        "id": 243,
+        "log_date": "2025-12-12",
+        "task": "Configured new FIDS screen on Counter 60 & 61",
+        "updated_at": "2025-12-12 06:38:22.327830",
+        "user_id": 1
+    },
+    {
+        "created_at": "2025-12-12 08:12:30.861637",
+        "id": 244,
+        "log_date": "2025-12-12",
+        "task": "Updated AMHS address book as per Mr. Sabu request.",
+        "updated_at": "2025-12-12 08:12:30.861664",
+        "user_id": 1
+    },
+    {
+        "created_at": "2025-12-12 12:12:08.411974",
+        "id": 245,
+        "log_date": "2025-12-12",
+        "task": "Provided updated RSMS Network and Power Connectivity Diagram",
+        "updated_at": "2025-12-12 12:12:08.411992",
+        "user_id": 1
+    },
+    {
+        "created_at": "2025-12-15 04:54:15.168257",
+        "id": 246,
+        "log_date": "2025-12-15",
+        "task": "Initiated calibration process of Temperature & Humidity Probe. (RE: MR 0032-2025 HMP155 Calibration: Temperature & Humidity Probe)",
+        "updated_at": "2025-12-15 04:54:15.168275",
+        "user_id": 1
+    },
+    {
+        "created_at": "2025-12-15 04:54:31.369619",
+        "id": 247,
+        "log_date": "2025-12-15",
+        "task": "Provided update on CNS WIP Risk Register Update December 2025",
+        "updated_at": "2025-12-15 04:54:31.369636",
+        "user_id": 1
+    },
+    {
+        "created_at": "2025-12-15 09:48:06.115336",
+        "id": 248,
+        "log_date": "2025-12-15",
+        "task": "Applied for ADP.",
+        "updated_at": "2025-12-15 09:48:06.115354",
+        "user_id": 1
+    },
+    {
+        "created_at": "2025-12-16 11:17:56.297754",
+        "id": 249,
+        "log_date": "2025-12-16",
+        "task": "Provided updated drawings of new RSMS CCTV Network Connectivity Diagram",
+        "updated_at": "2025-12-16 11:17:56.297772",
+        "user_id": 1
+    },
+    {
+        "created_at": "2025-12-16 12:18:34.678606",
+        "id": 250,
+        "log_date": "2025-12-16",
+        "task": "created a script to automate Monthly AWOS Calibration Report",
+        "updated_at": "2025-12-16 12:18:34.678624",
+        "user_id": 1
+    },
+    {
+        "created_at": "2025-12-17 04:02:40.170383",
+        "id": 251,
+        "log_date": "2025-12-16",
+        "task": "Replaced damaged FIDS screen with a working unit at GATE-26.",
+        "updated_at": "2025-12-17 04:02:40.170400",
+        "user_id": 1
+    },
+    {
+        "created_at": "2025-12-17 07:51:21.265016",
+        "id": 252,
+        "log_date": "2025-12-17",
+        "task": "Provided nominated participants for RSMS - Technical Training",
+        "updated_at": "2025-12-17 07:51:21.265034",
+        "user_id": 1
+    },
+    {
+        "created_at": "2025-12-17 08:33:06.800219",
+        "id": 253,
+        "log_date": "2025-12-17",
+        "task": "Escorted Bayanat during the transportation of ducts to the storage room (old Radar room) for the new AWOS project.",
+        "updated_at": "2025-12-17 08:33:06.800248",
+        "user_id": 1
+    },
+    {
+        "created_at": "2025-12-17 11:42:26.076426",
+        "id": 254,
+        "log_date": "2025-12-10",
+        "task": "Assisted Bayanat with opening and checking FOC manholes for the ongoing AWOS upgrade project.",
+        "updated_at": "2025-12-17 11:42:26.076443",
+        "user_id": 1
+    },
+    {
+        "created_at": "2025-12-18 05:18:24.000274",
+        "id": 255,
+        "log_date": "2025-12-15",
+        "task": "Changed Temperature & Humidity Probe with a calibrated unit.",
+        "updated_at": "2025-12-18 05:18:24.000293",
+        "user_id": 1
+    },
+    {
+        "created_at": "2025-12-18 11:12:43.321790",
+        "id": 256,
+        "log_date": "2025-12-18",
+        "task": "Connected RSMS Media converter to sw2 p14. Cable management done.",
+        "updated_at": "2025-12-18 11:12:43.321809",
+        "user_id": 1
+    }
+]
