@@ -8,7 +8,7 @@ class TagAdmin(admin.ModelAdmin):
 
 @admin.register(WorkLog)
 class WorkLogAdmin(admin.ModelAdmin):
-    list_display = ('user', 'date', 'task_description', 'created_at')
+    list_display = ('date', 'task_description')
     list_filter = ('user', 'date', 'tags')
     search_fields = ('task_description', 'user__username')
     filter_horizontal = ('tags',)
