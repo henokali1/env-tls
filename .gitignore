@@ -26,6 +26,10 @@ ENV/
 .env
 .env.*
 .venv/
+bin/
+lib/
+lib64
+pyvenv.cfg
 
 # =========================
 # Django migrations (optional)
