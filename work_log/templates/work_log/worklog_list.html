@@ -77,8 +77,8 @@
                     </select>
                 </div>
                 <div class="filter-item">
-                    <label>Search Recent Logs</label>
-                    <input type="text" id="logSearch" placeholder="Search description..." style="background: var(--card-bg);">
+                    <label>Search All Logs</label>
+                    <input type="text" name="q" id="logSearch" value="{{ request.GET.q|default:'' }}" placeholder="Search description..." style="background: var(--card-bg);">
                 </div>
                 <div class="filter-actions">
                     <button type="submit" class="btn btn-primary">Apply</button>
@@ -322,21 +322,6 @@
             e.preventDefault();
             showToast('Please select both Start and End date to export logs.', 'error');
         }
-    });
-
-    // Live Search
-    document.getElementById('logSearch').addEventListener('input', function(e) {
-        const searchTerm = e.target.value.toLowerCase();
-        const rows = document.querySelectorAll('.log-row');
-        
-        rows.forEach(row => {
-            const content = row.querySelector('.search-content').textContent.toLowerCase();
-            if (content.includes(searchTerm)) {
-                row.style.display = '';
-            } else {
-                row.style.display = 'none';
-            }
-        });
     });
 </script>
 {% endblock %}

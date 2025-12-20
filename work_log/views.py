@@ -35,6 +35,7 @@ class WorkLogListView(LoginRequiredMixin, ListView):
         start_date = self.request.GET.get('start_date')
         end_date = self.request.GET.get('end_date')
         tag_id = self.request.GET.get('tag')
+        query = self.request.GET.get('q')
 
         if start_date:
             queryset = queryset.filter(date__gte=start_date)
@@ -42,6 +43,8 @@ class WorkLogListView(LoginRequiredMixin, ListView):
             queryset = queryset.filter(date__lte=end_date)
         if tag_id and tag_id.strip():
             queryset = queryset.filter(tags=tag_id)
+        if query and query.strip():
+            queryset = queryset.filter(task_description__icontains=query)
             
         return queryset.distinct()
 
@@ -79,6 +82,7 @@ def export_worklogs_csv(request):
     start_date = request.GET.get('start_date')
     end_date = request.GET.get('end_date')
     tag_id = request.GET.get('tag')
+    query = request.GET.get('q')
 
     if start_date:
         queryset = queryset.filter(date__gte=start_date)
@@ -86,6 +90,8 @@ def export_worklogs_csv(request):
         queryset = queryset.filter(date__lte=end_date)
     if tag_id and tag_id.strip():
         queryset = queryset.filter(tags=tag_id)
+    if query and query.strip():
+        queryset = queryset.filter(task_description__icontains=query)
 
     queryset = queryset.distinct()
 
