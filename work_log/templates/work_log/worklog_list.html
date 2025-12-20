@@ -51,7 +51,7 @@
         <div class="card-header">
             <h2 style="margin: 0; font-size: 1.25rem;">Recent Logs</h2>
             <div style="display: flex; gap: 0.5rem;">
-                <a href="{% url 'worklog_export' %}?{{ request.GET.urlencode }}" class="btn"
+                <a href="{% url 'worklog_export' %}?{{ request.GET.urlencode }}" class="btn" id="exportBtn"
                     style="border: 1px solid var(--border-color); background-color: #10b981; color: white;">Export CSV</a>
             </div>
         </div>
@@ -61,11 +61,11 @@
             <form method="get" class="filters-form">
                 <div class="filter-item">
                     <label>Start Date</label>
-                    <input type="date" name="start_date" value="{{ request.GET.start_date }}">
+                    <input type="date" name="start_date" id="id_start_date" value="{{ request.GET.start_date }}">
                 </div>
                 <div class="filter-item">
                     <label>End Date</label>
-                    <input type="date" name="end_date" value="{{ request.GET.end_date }}">
+                    <input type="date" name="end_date" id="id_end_date" value="{{ request.GET.end_date }}">
                 </div>
                 <div class="filter-item">
                     <label>Filter by Tag</label>
@@ -75,6 +75,10 @@
                         <option value="{{ tag.id }}" {% if request.GET.tag == tag.id|stringformat:"i" %}selected{% endif %}>{{ tag.name }}</option>
                         {% endfor %}
                     </select>
+                </div>
+                <div class="filter-item">
+                    <label>Search Recent Logs</label>
+                    <input type="text" id="logSearch" placeholder="Search description..." style="background: var(--card-bg);">
                 </div>
                 <div class="filter-actions">
                     <button type="submit" class="btn btn-primary">Apply</button>
@@ -104,12 +108,12 @@
                     </thead>
                     <tbody>
                         {% for log in worklogs %}
-                        <tr>
+                        <tr class="log-row">
                             <td style="white-space: nowrap; font-weight: 500;">
                                 <div style="font-size: 1.1rem;">{{ log.date|date:"d" }}</div>
                                 <div style="font-size: 0.8rem; opacity: 0.7; text-transform: uppercase;">{{ log.date|date:"M Y" }}</div>
                             </td>
-                            <td class="task-desc-cell">{{ log.task_description|linebreaksbr }}</td>
+                            <td class="task-desc-cell search-content">{{ log.task_description|linebreaksbr }}</td>
                             <td>
                                 <div class="tag-container">
                                     {% for tag in log.tags.all %}
@@ -307,4 +311,32 @@
         }
     }
 </style>
+
+<script>
+    // Export Validation
+    document.getElementById('exportBtn').addEventListener('click', function(e) {
+        const startDate = document.getElementById('id_start_date').value;
+        const endDate = document.getElementById('id_end_date').value;
+        
+        if (!startDate || !endDate) {
+            e.preventDefault();
+            showToast('Please select both Start and End date to export logs.', 'error');
+        }
+    });
+
+    // Live Search
+    document.getElementById('logSearch').addEventListener('input', function(e) {
+        const searchTerm = e.target.value.toLowerCase();
+        const rows = document.querySelectorAll('.log-row');
+        
+        rows.forEach(row => {
+            const content = row.querySelector('.search-content').textContent.toLowerCase();
+            if (content.includes(searchTerm)) {
+                row.style.display = '';
+            } else {
+                row.style.display = 'none';
+            }
+        });
+    });
+</script>
 {% endblock %}

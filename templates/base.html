@@ -349,6 +349,45 @@
         padding: 0.25rem;
         font-size: 1.2rem;
       }
+
+      /* Simple Toast Styles */
+      .toast-container {
+        position: fixed;
+        top: 20px;
+        right: 20px;
+        z-index: 9999;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+      }
+
+      .toast {
+        background: #333;
+        color: white;
+        padding: 12px 24px;
+        border-radius: 8px;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        animation: slideInRight 0.3s ease-out, fadeOut 0.3s ease-in 2.7s forwards;
+        font-weight: 500;
+        border-left: 4px solid var(--primary-color);
+      }
+
+      .toast.error {
+        border-left-color: var(--danger-color);
+      }
+
+      @keyframes slideInRight {
+        from { transform: translateX(100%); opacity: 0; }
+        to { transform: translateX(0); opacity: 1; }
+      }
+
+      @keyframes fadeOut {
+        from { opacity: 1; }
+        to { opacity: 0; }
+      }
     </style>
   </head>
 
@@ -402,6 +441,8 @@
     </nav>
 
     <div class="container">{% block content %} {% endblock %}</div>
+
+    <div id="toastContainer" class="toast-container"></div>
 
     <div id="installBanner" class="install-banner">
       <p>Install Env TLS for a better experience!</p>
@@ -500,6 +541,17 @@
           ? "dark"
           : "light");
       document.documentElement.setAttribute("data-theme", saved);
+
+      function showToast(message, type = 'info') {
+        const container = document.getElementById('toastContainer');
+        const toast = document.createElement('div');
+        toast.className = `toast ${type}`;
+        toast.innerHTML = `<span>${message}</span>`;
+        container.appendChild(toast);
+        setTimeout(() => {
+          toast.remove();
+        }, 3000);
+      }
     </script>
   </body>
 </html>
