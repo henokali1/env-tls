@@ -95,8 +95,16 @@ def export_worklogs_csv(request):
 
     queryset = queryset.distinct()
 
+    filename = "worklogs"
+    if start_date and end_date:
+        filename = f"worklogs_{start_date}_to_{end_date}"
+    elif start_date:
+        filename = f"worklogs_since_{start_date}"
+    elif end_date:
+        filename = f"worklogs_until_{end_date}"
+
     response = HttpResponse(content_type='text/csv')
-    response['Content-Disposition'] = 'attachment; filename="worklogs.csv"'
+    response['Content-Disposition'] = f'attachment; filename="{filename}.csv"'
 
     writer = csv.writer(response)
     writer.writerow(['Date', 'Task Description', 'Tags'])
