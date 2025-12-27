@@ -1,12 +1,13 @@
 import requests
+import os
 from flask import Flask, jsonify, request
 
 app = Flask(__name__)
 
 # API Configuration
 BASE_URL = "https://env-tls.henokcodes.com"
-API_USERNAME = "humer@enova-me.com"  # Replace with actual credentials
-API_PASSWORD = "@Tmsqe!132"
+API_USERNAME = os.environ.get("API_USERNAME")
+API_PASSWORD = os.environ.get("API_PASSWORD")
 
 class APIClient:
     def __init__(self, base_url, username, password):
