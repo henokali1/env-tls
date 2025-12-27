@@ -7,6 +7,32 @@ from django.http import HttpResponse
 from .models import WorkLog, Tag
 from .forms import WorkLogForm, TagForm
 from django.urls import reverse_lazy
+from rest_framework.views import APIView
+from rest_framework.response import Response
+from rest_framework.permissions import IsAuthenticated
+from .serializers import WorkLogSerializer
+
+class WorkLogAPIView(APIView):
+    permission_classes = [IsAuthenticated]
+
+    def get(self, request):
+        queryset = WorkLog.objects.all()
+
+        start_date = request.query_params.get('start_date')
+        end_date = request.query_params.get('end_date')
+        tag = request.query_params.get('tag')
+
+        if start_date:
+            queryset = queryset.filter(date__gte=start_date)
+        if end_date:
+            queryset = queryset.filter(date__lte=end_date)
+        if tag:
+            queryset = queryset.filter(tags__id=tag)
+
+        queryset = queryset.distinct().order_by('date')
+        
+        serializer = WorkLogSerializer(queryset, many=True)
+        return Response(serializer.data)
 
 class WorkLogCreateView(LoginRequiredMixin, CreateView):
     model = WorkLog
