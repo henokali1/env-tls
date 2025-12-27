@@ -19,12 +19,19 @@ class APIClient:
 
     def login(self):
         """Obtain JWT tokens from the Django API."""
+        if not self.username or not self.password:
+            print("Error: API_USERNAME or API_PASSWORD environment variables are not set.")
+            return False
+            
         url = f"{self.base_url}/api/token/"
         try:
+            print(f"Attempting login for user: {self.username}")
             response = requests.post(url, json={
                 "username": self.username,
                 "password": self.password
             })
+            if response.status_code == 400:
+                print(f"Bad Request (400): {response.text}")
             response.raise_for_status()
             data = response.json()
             self.access_token = data.get('access')
