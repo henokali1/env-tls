@@ -1,0 +1,32 @@
+{% extends 'base.html' %} {% block title %}Edit FIDS | Env TLS{% endblock %} {% block content %}
+<div style="margin-bottom: 2rem;">
+    <a href="{% url 'fids_list' %}" style="text-decoration: none; color: var(--primary-color); font-weight: 600;">← Back
+        to List</a>
+</div>
+
+<div class="card" style="max-width: 600px; margin: 0 auto;">
+    <div class="card-header">Edit FIDS Detail</div>
+    <div class="card-body">
+        <form method="post">
+            {% csrf_token %}
+            {% for field in form %}
+            <div class="form-group">
+                <label>{{ field.label }}</label>
+                {{ field }}
+                {% if field.errors %}
+                <div style="color: var(--danger-color); font-size: 0.8rem; margin-top: 0.25rem;">
+                    {{ field.errors|striptags }}
+                </div>
+                {% endif %}
+            </div>
+            {% endfor %}
+            <div style="display: flex; gap: 1rem; margin-top: 2rem;">
+                <button type="submit" class="btn btn-primary" style="flex-grow: 1; padding: 0.75rem;">Update
+                    Details</button>
+                <a href="{% url 'fids_list' %}" class="btn"
+                    style="flex-grow: 1; padding: 0.75rem; background: var(--bg-color); color: var(--text-color); text-align: center;">Cancel</a>
+            </div>
+        </form>
+    </div>
+</div>
+{% endblock %}

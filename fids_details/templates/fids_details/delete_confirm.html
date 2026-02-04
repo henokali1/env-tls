@@ -1,0 +1,17 @@
+{% extends 'base.html' %} {% block title %}Delete FIDS | Env TLS{% endblock %} {% block content %}
+<div class="card" style="max-width: 500px; margin: 4rem auto; text-align: center;">
+    <div class="card-header" style="justify-content: center; color: var(--danger-color);">Confirm Deletion</div>
+    <div class="card-body">
+        <div style="font-size: 3rem; margin-bottom: 1rem;">⚠️</div>
+        <p>Are you sure you want to delete the FIDS device <strong>{{ detail.device_id }}</strong>?</p>
+        <p style="font-size: 0.85rem; opacity: 0.6;">This action cannot be undone.</p>
+
+        <form method="post" style="margin-top: 2rem; display: flex; gap: 1rem; justify-content: center;">
+            {% csrf_token %}
+            <button type="submit" class="btn btn-danger" style="padding: 0.75rem 2rem;">Yes, Delete It</button>
+            <a href="{% url 'fids_list' %}" class="btn"
+                style="padding: 0.75rem 2rem; background: var(--bg-color); color: var(--text-color);">No, Keep It</a>
+        </form>
+    </div>
+</div>
+{% endblock %}

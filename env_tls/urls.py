@@ -18,6 +18,7 @@ urlpatterns = [
     path('accounts/', include('django.contrib.auth.urls')),
     path('work-logs/', include('work_log.urls')),
     path('phone-extensions/', include('phone_extension.urls')),
+    path('fids-details/', include('fids_details.urls')),
     path('manifest.json', TemplateView.as_view(template_name='manifest.json', content_type='application/json'), name='manifest.json'),
     path('sw.js', TemplateView.as_view(template_name='sw.js', content_type='application/javascript'), name='sw_js'),
     path('api/token/', TokenObtainPairView.as_view(), name='token_obtain_pair'),

@@ -1,0 +1,180 @@
+{% extends 'base.html' %} {% block title %}FIDS Details | Env TLS{% endblock %} {% block content %}
+<div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 2rem;">
+    <h1 style="margin: 0; font-weight: 800; font-size: 2rem;">FIDS Details</h1>
+    <a href="{% url 'fids_manage' %}" class="btn btn-primary" style="display: flex; align-items: center; gap: 0.5rem;">
+        <span>+</span> Add / Import
+    </a>
+</div>
+
+{% if messages %}
+<div style="margin-bottom: 1.5rem;">
+    {% for message in messages %}
+    <div class="alert {% if message.tags == 'success' %}alert-success{% elif message.tags == 'warning' %}alert-warning{% else %}alert-danger{% endif %}">
+        {{ message }}
+    </div>
+    {% endfor %}
+</div>
+{% endif %}
+
+<div class="card" style="margin-bottom: 2rem;">
+    <div class="card-header" style="flex-direction: column; align-items: stretch; gap: 1rem;">
+        <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
+            <!-- Search Bar -->
+            <div style="flex-grow: 1; min-width: 250px;">
+                <input type="text" id="jsSearchInput" placeholder="Search Device ID, IP, or MAC..." 
+                       style="width: 100%; box-sizing: border-box;">
+            </div>
+            <!-- Location Filter -->
+            <div style="width: 200px;">
+                <select id="locationFilter" style="width: 100%; box-sizing: border-box;">
+                    <option value="">All Locations</option>
+                    {% for loc in locations %}
+                    <option value="{{ loc }}">{{ loc }}</option>
+                    {% endfor %}
+                </select>
+            </div>
+        </div>
+        <div style="font-size: 0.8rem; opacity: 0.6;" id="resultCount">
+            Showing {{ details|length }} devices
+        </div>
+    </div>
+    <div class="card-body" style="padding: 0;">
+        <div style="overflow-x: auto;">
+            <table id="fidsTable">
+                <thead>
+                    <tr>
+                        <th>Device ID</th>
+                        <th>IP Address</th>
+                        <th>MAC Address</th>
+                        <th>Location</th>
+                        <th style="text-align: right;">Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for item in details %}
+                    <tr class="fids-row" 
+                        data-device-id="{{ item.device_id|lower }}" 
+                        data-ip="{{ item.ip_address }}" 
+                        data-mac="{{ item.mac_address|lower }}"
+                        data-location="{{ item.location }}">
+                        <td style="font-weight: 600;">{{ item.device_id }}</td>
+                        <td>
+                            <code style="background: var(--bg-color); padding: 2px 6px; border-radius: 4px;">{{ item.ip_address }}</code>
+                        </td>
+                        <td>
+                            <code class="mac-display" data-normalized="{{ item.mac_address }}" style="background: var(--bg-color); padding: 2px 6px; border-radius: 4px;">{{ item.mac_address }}</code>
+                        </td>
+                        <td>
+                            <span class="location-tag" style="font-size: 0.85rem;">{{ item.location }}</span>
+                        </td>
+                        <td style="text-align: right; white-space: nowrap;">
+                            <a href="{% url 'fids_update' item.pk %}" class="btn"
+                               style="background: #fef3c7; color: #92400e; padding: 4px 12px; font-size: 0.8rem; margin-right: 0.5rem;">Edit</a>
+                            <a href="{% url 'fids_delete' item.pk %}" class="btn btn-danger"
+                               style="padding: 4px 12px; font-size: 0.8rem;">Delete</a>
+                        </td>
+                    </tr>
+                    {% empty %}
+                    <tr id="emptyRow">
+                        <td colspan="5" style="text-align: center; padding: 3rem; opacity: 0.5;">
+                            No FIDS details found. Click "Add / Import" to get started.
+                        </td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+<script>
+    const searchInput = document.getElementById('jsSearchInput');
+    const locationFilter = document.getElementById('locationFilter');
+    const rows = document.querySelectorAll('.fids-row');
+    const resultCount = document.getElementById('resultCount');
+
+    function normalizeMac(mac) {
+        return mac.replace(/[^a-zA-Z0-9]/g, '').toLowerCase();
+    }
+
+    function filterTable() {
+        const query = searchInput.value.toLowerCase();
+        const normQuery = normalizeMac(query);
+        const location = locationFilter.value;
+        let visibleCount = 0;
+
+        rows.forEach(row => {
+            const deviceId = row.getAttribute('data-device-id');
+            const ip = row.getAttribute('data-ip');
+            const mac = row.getAttribute('data-mac');
+            const normMac = normalizeMac(mac);
+            const rowLocation = row.getAttribute('data-location');
+
+            const matchesSearch = deviceId.includes(query) || 
+                                ip.includes(query) || 
+                                mac.includes(query) || 
+                                normMac.includes(normQuery);
+            
+            const matchesLocation = location === "" || rowLocation === location;
+
+            if (matchesSearch && matchesLocation) {
+                row.style.display = '';
+                visibleCount++;
+            } else {
+                row.style.display = 'none';
+            }
+        });
+
+        resultCount.innerText = `Showing ${visibleCount} devices`;
+        
+        let noResults = document.getElementById('noResultsRow');
+        if (visibleCount === 0 && rows.length > 0) {
+            if (!noResults) {
+                const tbody = document.querySelector('#fidsTable tbody');
+                noResults = document.createElement('tr');
+                noResults.id = 'noResultsRow';
+                noResults.innerHTML = '<td colspan="5" style="text-align: center; padding: 3rem; opacity: 0.5;">No matching devices found.</td>';
+                tbody.appendChild(noResults);
+            }
+        } else if (noResults) {
+            noResults.remove();
+        }
+    }
+
+    searchInput.addEventListener('input', filterTable);
+    locationFilter.addEventListener('change', filterTable);
+</script>
+
+<style>
+    .alert {
+        padding: 1rem;
+        border-radius: 0.75rem;
+        margin-bottom: 1rem;
+        font-weight: 500;
+    }
+    .alert-success { background: #d1fae5; color: #065f46; border: 1px solid #a7f3d0; }
+    .alert-warning { background: #ffedd5; color: #9a3412; border: 1px solid #fed7aa; }
+    .alert-danger { background: #fee2e2; color: #991b1b; border: 1px solid #fecaca; }
+
+    .location-tag {
+        background: #f3f4f6;
+        padding: 4px 10px;
+        border-radius: 9999px;
+        color: #4b5563;
+        font-weight: 500;
+    }
+
+    th {
+        background: var(--bg-color);
+        font-size: 0.75rem;
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+        color: var(--text-color);
+        opacity: 0.7;
+    }
+
+    tr:hover {
+        background: rgba(37, 99, 235, 0.02);
+    }
+</style>
+{% endblock %}

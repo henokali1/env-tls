@@ -49,6 +49,7 @@ INSTALLED_APPS = [
     'credential_manager',
     'work_log',
     'phone_extension',
+    'fids_details',
     'rest_framework',
     'corsheaders',
 ]
