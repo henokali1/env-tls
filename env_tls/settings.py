@@ -25,10 +25,10 @@ SECRET_KEY = '3o*0aw*pr)ld2n-v8(*381=&@i20*zdlbu6z^*1=^!m%r_7#*#'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['env-tls.henokcodes.com', 'localhost', '127.0.0.1', '3.29.35.209']
+ALLOWED_HOSTS = ['envtls.henokcodes.com', 'localhost', '127.0.0.1', '3.29.35.209']
 
 CSRF_TRUSTED_ORIGINS = [
-    'https://env-tls.henokcodes.com',
+    'https://envtls.henokcodes.com',
     'https://*.henokcodes.com',  # This covers all subdomains
 ]
 
@@ -154,7 +154,7 @@ REST_FRAMEWORK = {
 
 # CORS Configuration
 CORS_ALLOWED_ORIGINS = [
-    'https://env-tls.henokcodes.com',
+    'https://envtls.henokcodes.com',
 ]
 
 # Simple JWT Configuration
